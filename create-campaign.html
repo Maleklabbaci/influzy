@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Create Campaign — Influzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav id="nav"><div class="nav-in">
+ <a href="index.html" class="logo">influ<b>zy</b></a>
+ <div class="n-links" id="nm">
+  <a href="creators.html">Creators</a><a href="index.html#pricing">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+  <a class="n-cta" href="create-campaign.html">Create Campaign →</a>
+ </div>
+ <div class="n-right"><button class="t-btn" onclick="togT()" id="tBtn">☀</button><div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div></div>
+</div></nav>
+
+<section class="in-hero">
+ <div class="wrap">
+  <div class="bc"><a href="index.html">Home</a><span>/</span><span>Create Campaign</span></div>
+  <h1>Launch Your <span class="hl">Campaign</span></h1>
+  <p>Follow these 4 simple steps to create your influencer marketing campaign.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="stepper">
+
+   <!-- STEPPER BAR -->
+   <div class="stepper-bar">
+    <div class="stepper-dot active" onclick="stepTo(1)">1</div>
+    <div class="stepper-line"></div>
+    <div class="stepper-dot" onclick="stepTo(2)">2</div>
+    <div class="stepper-line"></div>
+    <div class="stepper-dot" onclick="stepTo(3)">3</div>
+    <div class="stepper-line"></div>
+    <div class="stepper-dot" onclick="stepTo(4)">4</div>
+   </div>
+
+   <!-- STEP 1: Company Info -->
+   <div class="step-panel active" id="step1">
+    <h3>Step 1 — Your Company</h3>
+    <p class="step-sub">Tell us about your brand so we can match you with the right creators.</p>
+    <div class="fd-row">
+     <div class="fd"><label>Company / Brand Name</label><input required type="text" placeholder="DZ Cosmetics"></div>
+     <div class="fd"><label>Your Full Name</label><input required type="text" placeholder="Karim Benali"></div>
+    </div>
+    <div class="fd-row">
+     <div class="fd"><label>Email</label><input required type="email" placeholder="contact@brand.dz"></div>
+     <div class="fd"><label>Phone</label><input required type="tel" placeholder="0555 XX XX XX"></div>
+    </div>
+    <div class="fd"><label>Industry</label>
+     <select required><option value="">Select your industry</option><option>Beauty / Cosmetics</option><option>Food / Restaurants</option><option>Fashion / Clothing</option><option>Tech / Electronics</option><option>Health / Wellness</option><option>Real Estate</option><option>Education</option><option>E-commerce</option><option>Services</option><option>Other</option></select>
+    </div>
+    <div class="fd"><label>Company Website / Instagram (optional)</label><input type="text" placeholder="www.brand.dz or @brand_dz"></div>
+    <div class="step-nav"><div></div><button class="btn-m" onclick="stepTo(2)">Next: Campaign Details →</button></div>
+   </div>
+
+   <!-- STEP 2: Campaign Details -->
+   <div class="step-panel" id="step2">
+    <h3>Step 2 — Campaign Details</h3>
+    <p class="step-sub">Define what you want to promote and how.</p>
+    <div class="fd"><label>Campaign Name</label><input required type="text" placeholder="Summer Collection Launch"></div>
+    <div class="fd"><label>What are you promoting?</label><textarea required placeholder="Describe the product, service, or event you want to promote. Be specific about key messages."></textarea></div>
+    <div class="fd-row">
+     <div class="fd"><label>Campaign Goal</label>
+      <select required><option value="">Select goal</option><option>Brand Awareness</option><option>Drive Sales</option><option>Store Visits</option><option>App Downloads</option><option>Event Promotion</option><option>Product Launch</option><option>Content Creation (UGC)</option></select>
+     </div>
+     <div class="fd"><label>Target Audience</label>
+      <select required><option value="">Select audience</option><option>Women 18-25</option><option>Women 25-35</option><option>Men 18-25</option><option>Men 25-35</option><option>Mixed 18-35</option><option>Families</option><option>Teens 13-18</option><option>All ages</option></select>
+     </div>
+    </div>
+    <div class="fd-row">
+     <div class="fd"><label>Preferred Platform(s)</label>
+      <select required><option value="">Select platform</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>YouTube</option><option>Instagram + TikTok</option><option>All platforms</option></select>
+     </div>
+     <div class="fd"><label>Content Format</label>
+      <select required><option value="">Select format</option><option>Instagram Stories</option><option>Instagram Reels</option><option>Instagram Posts</option><option>TikTok Videos</option><option>YouTube Videos</option><option>Mixed formats</option><option>UGC Only (for your ads)</option></select>
+     </div>
+    </div>
+    <div class="fd"><label>Target Wilaya(s)</label><input type="text" placeholder="Algiers, Oran, Nationwide..."></div>
+    <div class="step-nav"><button class="btn-g" onclick="stepTo(1)">← Back</button><button class="btn-m" onclick="stepTo(3)">Next: Budget →</button></div>
+   </div>
+
+   <!-- STEP 3: Budget & Timeline -->
+   <div class="step-panel" id="step3">
+    <h3>Step 3 — Budget & Timeline</h3>
+    <p class="step-sub">Set your budget and when you want the campaign to run.</p>
+    <div class="fd"><label>Select Your Pack</label>
+     <select required>
+      <option value="">Choose a pack</option>
+      <option>Gratuit — 0 DZD (limited access)</option>
+      <option>Basic — 5,000 DZD/year</option>
+      <option>VIP — 50,000 DZD/year (recommended)</option>
+      <option>VIP+ — 150,000 DZD/year</option>
+      <option>Custom — Contact us for a quote</option>
+     </select>
+    </div>
+    <div class="fd"><label>Additional Budget for Creators (optional)</label>
+     <select>
+      <option value="">Select creator budget</option>
+      <option>No additional budget (product gifting only)</option>
+      <option>Under 20,000 DZD</option>
+      <option>20,000 — 50,000 DZD</option>
+      <option>50,000 — 100,000 DZD</option>
+      <option>100,000 — 200,000 DZD</option>
+      <option>200,000+ DZD</option>
+     </select>
+    </div>
+    <div class="fd-row">
+     <div class="fd"><label>Preferred Start Date</label><input required type="date"></div>
+     <div class="fd"><label>Campaign Duration</label>
+      <select required><option value="">Select duration</option><option>1 week</option><option>2 weeks</option><option>1 month</option><option>3 months</option><option>Ongoing</option></select>
+     </div>
+    </div>
+    <div class="fd"><label>How Many Creators Do You Need?</label>
+     <select required><option value="">Select number</option><option>1-3 creators</option><option>4-7 creators</option><option>8-15 creators</option><option>15+ creators</option><option>Not sure — help me decide</option></select>
+    </div>
+    <div class="fd"><label>Payment Method Preference</label>
+     <select><option value="">Select method</option><option>CCP</option><option>BaridiMob</option><option>Bank Transfer</option><option>Cash (Algiers area)</option></select>
+    </div>
+    <div class="step-nav"><button class="btn-g" onclick="stepTo(2)">← Back</button><button class="btn-m" onclick="stepTo(4)">Next: Review →</button></div>
+   </div>
+
+   <!-- STEP 4: Review & Submit -->
+   <div class="step-panel" id="step4">
+    <h3>Step 4 — Review & Submit</h3>
+    <p class="step-sub">Almost done! Review your campaign brief and submit.</p>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px">
+     <h4 style="font-size:15px;font-weight:700;margin-bottom:12px">Campaign Brief Summary</h4>
+     <p style="font-size:13px;color:var(--text2);line-height:1.8">
+      Your campaign details have been captured. After submission, our team will:<br><br>
+      <strong style="color:var(--text)">1.</strong> Review your brief within 24 hours<br>
+      <strong style="color:var(--text)">2.</strong> Send you a curated list of matching creators<br>
+      <strong style="color:var(--text)">3.</strong> Schedule a call to finalize the strategy<br>
+      <strong style="color:var(--text)">4.</strong> Launch your campaign once everything is approved
+     </p>
+    </div>
+    <div class="fd"><label>Additional Notes (optional)</label><textarea placeholder="Any special requirements, brand guidelines, dos and don'ts..."></textarea></div>
+    <div class="fd" style="display:flex;gap:8px;align-items:center">
+     <input type="checkbox" id="terms" style="width:auto;flex-shrink:0" required>
+     <label for="terms" style="text-transform:none;letter-spacing:0;font-size:12px;margin-bottom:0">I agree to Influzy's terms of service and understand the pricing structure.</label>
+    </div>
+    <div class="step-nav"><button class="btn-g" onclick="stepTo(3)">← Back</button><button class="btn-m" onclick="subF(this)" style="background:var(--green)">Submit Campaign ✓</button></div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<footer><div class="wrap">
+ <div class="f-bot"><span>© 2025 Influzy. All rights reserved.</span><div style="display:flex;gap:16px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+</div></footer>
+
+<script src="app.js"></script>
+</body>
+</html>

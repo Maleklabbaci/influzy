@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard — Influzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav id="nav"><div class="nav-in">
+ <a href="index.html" class="logo">influ<b>zy</b></a>
+ <div class="n-links" id="nm">
+  <a href="creators.html">Creators</a><a href="create-campaign.html">Create Campaign</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a>
+  <a class="n-cta" href="create-campaign.html">New Campaign →</a>
+ </div>
+ <div class="n-right"><button class="t-btn" onclick="togT()" id="tBtn">☀</button><div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div></div>
+</div></nav>
+
+<section class="in-hero">
+ <div class="wrap">
+  <div class="bc"><a href="index.html">Home</a><span>/</span><span>Dashboard</span></div>
+  <h1>Campaign <span class="hl">Dashboard</span></h1>
+  <p>Monitor your campaigns, track performance, and manage creators.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <!-- STATS -->
+  <div class="dash-stats">
+   <div class="dash-stat"><h4><b>3</b></h4><p>Active Campaigns</p></div>
+   <div class="dash-stat"><h4><b>12</b></h4><p>Creators Engaged</p></div>
+   <div class="dash-stat"><h4><b>47.2K</b></h4><p>Total Reach</p></div>
+   <div class="dash-stat"><h4><b>8.6%</b></h4><p>Avg. Engagement</p></div>
+  </div>
+
+  <!-- CAMPAIGNS TABLE -->
+  <div class="dash-campaigns">
+   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <h3 style="font-size:20px;font-weight:800">My Campaigns</h3>
+    <a href="create-campaign.html" class="btn-m btn-sm">+ New Campaign</a>
+   </div>
+   <table class="dash-table">
+    <thead><tr><th>Campaign</th><th>Status</th><th>Creators</th><th>Reach</th><th>Engagement</th><th>Created</th></tr></thead>
+    <tbody>
+     <tr>
+      <td><strong style="color:var(--text)">Summer Menu Launch</strong><br><span style="font-size:11px;color:var(--text3)">Dar El Kouzina</span></td>
+      <td><span class="status status-active">Active</span></td>
+      <td>7</td>
+      <td>23.4K</td>
+      <td>9.2%</td>
+      <td>Jul 10, 2025</td>
+     </tr>
+     <tr>
+      <td><strong style="color:var(--text)">New Skincare Line</strong><br><span style="font-size:11px;color:var(--text3)">DZ Cosmetics</span></td>
+      <td><span class="status status-pending">Pending</span></td>
+      <td>5</td>
+      <td>—</td>
+      <td>—</td>
+      <td>Jul 14, 2025</td>
+     </tr>
+     <tr>
+      <td><strong style="color:var(--text)">Ramadan Special Promo</strong><br><span style="font-size:11px;color:var(--text3)">Caprice Algeria</span></td>
+      <td><span class="status status-done">Completed</span></td>
+      <td>15</td>
+      <td>98.7K</td>
+      <td>11.4%</td>
+      <td>Mar 1, 2025</td>
+     </tr>
+     <tr>
+      <td><strong style="color:var(--text)">Back to School</strong><br><span style="font-size:11px;color:var(--text3)">TechDZ Store</span></td>
+      <td><span class="status status-done">Completed</span></td>
+      <td>8</td>
+      <td>34.1K</td>
+      <td>7.8%</td>
+      <td>Sep 5, 2024</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+
+  <!-- QUICK PROCESS REMINDER -->
+  <div style="margin-top:56px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:36px">
+   <h3 style="font-size:18px;font-weight:800;margin-bottom:20px">Campaign Lifecycle</h3>
+   <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;text-align:center">
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,44,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">1</div><div style="font-size:11px;font-weight:700">Submit Brief</div><div style="font-size:10px;color:var(--text3);margin-top:2px">You create campaign</div></div>
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,44,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">2</div><div style="font-size:11px;font-weight:700">We Match</div><div style="font-size:10px;color:var(--text3);margin-top:2px">We select best creators</div></div>
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,44,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">3</div><div style="font-size:11px;font-weight:700">You Approve</div><div style="font-size:10px;color:var(--text3);margin-top:2px">Validate creator list</div></div>
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,44,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">4</div><div style="font-size:11px;font-weight:700">Content Created</div><div style="font-size:10px;color:var(--text3);margin-top:2px">Creators produce content</div></div>
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,44,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">5</div><div style="font-size:11px;font-weight:700">Published</div><div style="font-size:10px;color:var(--text3);margin-top:2px">Content goes live</div></div>
+    <div><div style="width:32px;height:32px;border-radius:50%;background:rgba(34,197,94,.1);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin:0 auto 8px">6</div><div style="font-size:11px;font-weight:700">Report</div><div style="font-size:10px;color:var(--text3);margin-top:2px">Full analytics delivered</div></div>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<footer><div class="wrap">
+ <div class="f-bot"><span>© 2025 Influzy. All rights reserved.</span><div style="display:flex;gap:16px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+</div></footer>
+
+<script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f19ef786d8cba88',t:'MTc3NzA4NDMyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

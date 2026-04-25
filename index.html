@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Influzy — Plateforme de micro-influence #1 en Algérie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="lang-bar">
+    <button class="active" onclick="setLang('fr',this)">FR</button>
+    <button onclick="setLang('ar',this)">عربي</button>
+    <button onclick="setLang('en',this)">EN</button>
+  </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+ <div class="nav-inner">
+  <a href="index.html" class="logo">influ<i>zy</i></a>
+  <div class="nav-menu" id="navMenu">
+   <a href="about.html" data-fr="À propos" data-ar="من نحن" data-en="About">À propos</a>
+   <a href="#catalog" data-fr="Créateurs" data-ar="صناع المحتوى" data-en="Creators">Créateurs</a>
+   <a href="blog.html" data-fr="Blog" data-ar="المدونة" data-en="Blog">Blog</a>
+   <a href="faq.html" data-fr="FAQ" data-ar="أسئلة" data-en="FAQ">FAQ</a>
+   <a href="contact.html" data-fr="Contact" data-ar="اتصل بنا" data-en="Contact">Contact</a>
+   <a href="#" class="nav-cta" onclick="openM('brand');return false" data-fr="Lancer une campagne" data-ar="أطلق حملة" data-en="Start a campaign">Lancer une campagne <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+  <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+ </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+ <div class="container">
+  <div class="hero-grid">
+   <div>
+    <div class="hero-badge"><div class="hero-badge-dot"></div><span data-fr="Première plateforme en Algérie" data-ar="أول منصة في الجزائر" data-en="First platform in Algeria">Première plateforme en Algérie</span></div>
+    <h1 data-fr="La puissance des <em>micro-influenceurs</em> algériens, à portée de clic." data-ar="قوة <em>المؤثرين الصغار</em> الجزائريين، بنقرة واحدة." data-en="The power of Algerian <em>micro-influencers</em>, one click away.">La puissance des <em>micro-influenceurs</em> algériens, à portée de clic.</h1>
+    <p class="hero-sub" data-fr="Trouvez, contactez et lancez des campagnes avec des créateurs de contenu vérifiés. Plus d'authenticité. Plus d'engagement. Moins de budget gaspillé." data-ar="ابحث عن صناع محتوى موثقين وتواصل معهم وأطلق حملات. مصداقية أكثر. تفاعل أكثر. ميزانية أقل." data-en="Find, contact and launch campaigns with verified content creators. More authenticity. More engagement. Less wasted budget.">Trouvez, contactez et lancez des campagnes avec des créateurs de contenu vérifiés. Plus d'authenticité. Plus d'engagement. Moins de budget gaspillé.</p>
+    <div class="hero-actions">
+     <button class="btn-primary" onclick="openM('brand')" data-fr="Lancer une campagne" data-ar="أطلق حملة" data-en="Start a campaign">Lancer une campagne <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+     <button class="btn-outline" onclick="openM('creator')" data-fr="Je suis créateur" data-ar="أنا صانع محتوى" data-en="I'm a creator">Je suis créateur</button>
+    </div>
+    <div class="hero-metrics">
+     <div class="hero-metric"><h3><span class="counter" data-val="500">0</span><span>+</span></h3><p data-fr="Créateurs vérifiés" data-ar="صانع محتوى موثق" data-en="Verified creators">Créateurs vérifiés</p></div>
+     <div class="hero-metric"><h3><span class="counter" data-val="48">0</span></h3><p data-fr="Wilayas couvertes" data-ar="ولاية مغطاة" data-en="Wilayas covered">Wilayas couvertes</p></div>
+     <div class="hero-metric"><h3><span class="counter" data-val="95">0</span><span>%</span></h3><p data-fr="Satisfaction client" data-ar="رضا العملاء" data-en="Client satisfaction">Satisfaction client</p></div>
+    </div>
+   </div>
+   <div class="hero-visual">
+    <div class="hero-phone">
+     <div class="phone-notch"></div>
+     <div class="phone-profile"><div class="phone-avatar">S</div><div><div class="phone-name">Sara Beauty DZ</div><div class="phone-handle">@sara_beautydz · Alger</div></div></div>
+     <div class="phone-stats"><div class="phone-stat"><div class="phone-stat-val">12.4K</div><div class="phone-stat-label">Abonnés</div></div><div class="phone-stat"><div class="phone-stat-val">7.8%</div><div class="phone-stat-label">Engage.</div></div><div class="phone-stat"><div class="phone-stat-val">967</div><div class="phone-stat-label">Likes</div></div></div>
+     <div class="phone-bar"><div class="phone-bar-fill"></div></div>
+     <div class="phone-bar-label"><span>Taux d'engagement</span><span>82% ↑</span></div>
+     <button class="phone-cta">Collaborer</button>
+    </div>
+    <div class="hero-float hero-float-1">
+     <div class="float-icon float-icon-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+     <div><div class="float-text" data-fr="Campagne validée" data-ar="تم قبول الحملة" data-en="Campaign approved">Campagne validée</div><div class="float-sub">Il y a 2 min</div></div>
+    </div>
+    <div class="hero-float hero-float-2">
+     <div class="float-icon float-icon-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+     <div><div class="float-text">+35,000 DZD</div><div class="float-sub" data-fr="Paiement reçu" data-ar="تم استلام الدفع" data-en="Payment received">Paiement reçu</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- LOGOS -->
+<div class="logos-bar">
+ <div class="container">
+  <div class="logos-label" data-fr="Ils nous font confiance" data-ar="يثقون بنا" data-en="They trust us">Ils nous font confiance</div>
+  <div class="logos-track"><span>CAPRICE</span><span>ASUS</span><span>CONDOR</span><span>HAMOUD</span><span>IRIS</span><span>CEVITAL</span></div>
+ </div>
+</div>
+
+<!-- HOW -->
+<section class="how" id="how">
+ <div class="container">
+  <div class="section-header-center">
+   <div class="stag"><div class="stag-dot"></div><span data-fr="Fonctionnement" data-ar="كيف يعمل" data-en="How it works">Fonctionnement</span></div>
+   <h2 class="section-title" data-fr="Lancez une campagne en 4 étapes" data-ar="أطلق حملتك في 4 خطوات" data-en="Launch a campaign in 4 steps">Lancez une campagne en 4 étapes</h2>
+   <p class="section-desc" data-fr="Pas de process compliqué. Trouvez le bon créateur, briefez-le, et mesurez les résultats." data-ar="بدون عمليات معقدة. ابحث عن المبدع المناسب، أعطه التعليمات، وقس النتائج." data-en="No complicated process. Find the right creator, brief them, and measure results.">Pas de process compliqué. Trouvez le bon créateur, briefez-le, et mesurez les résultats.</p>
+  </div>
+  <div class="steps">
+   <div class="step-card"><div class="step-num">01</div><div class="step-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="18" cy="18" r="12" stroke="var(--blue)" stroke-width="2.5"/><line x1="26.5" y1="26.5" x2="36" y2="36" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3 data-fr="Explorez" data-ar="استكشف" data-en="Explore">Explorez</h3><p data-fr="Parcourez notre catalogue. Filtrez par niche, wilaya, plateforme ou taux d'engagement." data-ar="تصفح الكتالوج. فلتر حسب التخصص، الولاية أو نسبة التفاعل." data-en="Browse our catalog. Filter by niche, wilaya, platform or engagement rate.">Parcourez notre catalogue. Filtrez par niche, wilaya, plateforme ou taux d'engagement.</p></div>
+   <div class="step-card"><div class="step-num">02</div><div class="step-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="6" stroke="var(--blue)" stroke-width="2.5"/><polyline points="14 20 18 24 27 15" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-fr="Sélectionnez" data-ar="اختر" data-en="Select">Sélectionnez</h3><p data-fr="Choisissez les créateurs qui matchent votre marque. Audience réelle, stats vérifiées." data-ar="اختر المبدعين المناسبين لعلامتك. جمهور حقيقي وإحصائيات موثقة." data-en="Choose creators that match your brand. Real audience, verified stats.">Choisissez les créateurs qui matchent votre marque. Audience réelle, stats vérifiées.</p></div>
+   <div class="step-card"><div class="step-num">03</div><div class="step-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32l6-18L32 8l-6 18z" stroke="var(--blue)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="3" stroke="var(--blue)" stroke-width="2.5"/></svg></div><h3 data-fr="Lancez" data-ar="أطلق" data-en="Launch">Lancez</h3><p data-fr="Envoyez votre brief. On coordonne tout : contenu, planning, validation et publication." data-ar="أرسل ملخصك. نحن ننسق كل شيء: المحتوى، الجدول، الموافقة والنشر." data-en="Send your brief. We coordinate everything: content, planning, approval and publishing.">Envoyez votre brief. On coordonne tout : contenu, planning, validation et publication.</p></div>
+   <div class="step-card"><div class="step-num">04</div><div class="step-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="4" stroke="var(--blue)" stroke-width="2.5"/><polyline points="10 26 16 18 22 22 30 14" stroke="var(--orange)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-fr="Mesurez" data-ar="قِس" data-en="Measure">Mesurez</h3><p data-fr="Rapport détaillé : portée, engagement, impressions, conversions. Données 100% transparentes." data-ar="تقرير مفصل: وصول، تفاعل، انطباعات، تحويلات. بيانات شفافة 100%." data-en="Detailed report: reach, engagement, impressions, conversions. 100% transparent data.">Rapport détaillé : portée, engagement, impressions, conversions. Données 100% transparentes.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- NICHES -->
+<section>
+ <div class="container">
+  <div class="section-header-center">
+   <div class="stag"><div class="stag-dot"></div><span>Niches</span></div>
+   <h2 class="section-title" data-fr="Un créateur pour chaque secteur" data-ar="صانع محتوى لكل قطاع" data-en="A creator for every sector">Un créateur pour chaque secteur</h2>
+  </div>
+  <div class="niches-grid">
+   <div class="niche-card"><div class="niche-icon ni-beauty">&#9883;</div><h4>Beauté</h4><span>82 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-food">&#9832;</div><h4>Food</h4><span>64 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-style">&#9733;</div><h4>Mode & Lifestyle</h4><span>95 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-tech">&#9881;</div><h4>Tech & Gaming</h4><span>41 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-fit">&#9818;</div><h4>Fitness</h4><span>38 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-travel">&#9992;</div><h4>Voyage</h4><span>29 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-family">&#9829;</div><h4>Famille</h4><span>33 créateurs</span></div>
+   <div class="niche-card"><div class="niche-icon ni-comedy">&#9786;</div><h4>Humour</h4><span>56 créateurs</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+ <div class="container">
+  <div class="stag"><div class="stag-dot"></div><span>Catalogue</span></div>
+  <h2 class="section-title" data-fr="Créateurs vérifiés, prêts à collaborer" data-ar="صناع محتوى موثقون، جاهزون للتعاون" data-en="Verified creators, ready to collaborate">Créateurs vérifiés, prêts à collaborer</h2>
+  <p class="section-desc" data-fr="Chaque profil est audité : audience réelle, engagement authentique, contenu de qualité." data-ar="كل ملف تم تدقيقه: جمهور حقيقي، تفاعل أصلي، محتوى عالي الجودة." data-en="Each profile is audited: real audience, authentic engagement, quality content.">Chaque profil est audité : audience réelle, engagement authentique, contenu de qualité.</p>
+  <div class="cat-filters">
+   <button class="cat-filter active" onclick="fil(this,'all')">Tous</button>
+   <button class="cat-filter" onclick="fil(this,'beauty')">Beauté</button>
+   <button class="cat-filter" onclick="fil(this,'food')">Food</button>
+   <button class="cat-filter" onclick="fil(this,'lifestyle')">Lifestyle</button>
+   <button class="cat-filter" onclick="fil(this,'tech')">Tech</button>
+   <button class="cat-filter" onclick="fil(this,'fitness')">Fitness</button>
+  </div>
+  <div class="inf-grid">
+   <div class="inf-card" data-cat="beauty"><div class="inf-top"><div class="inf-ava inf-ava-1">A</div><div class="inf-info"><h4>Amina Beauty Tips</h4><p>@amina.beautydz</p><div class="inf-tag">Beauté · Alger</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">14.2K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">8.3%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">1.1K</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><div class="inf-plat plat-tt"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.13a8.16 8.16 0 004.76 1.53v-3.5a4.84 4.84 0 01-1-.47z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+   <div class="inf-card" data-cat="food"><div class="inf-top"><div class="inf-ava inf-ava-2">Y</div><div class="inf-info"><h4>Youcef Cuisine</h4><p>@youcef.cuisine.dz</p><div class="inf-tag">Food · Oran</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">9.8K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">11.2%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">1.0K</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><div class="inf-plat plat-fb"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+   <div class="inf-card" data-cat="lifestyle"><div class="inf-top"><div class="inf-ava inf-ava-3">L</div><div class="inf-info"><h4>Lina Lifestyle</h4><p>@lina.lifestyle.dz</p><div class="inf-tag">Lifestyle · Sétif</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">7.5K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">9.6%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">720</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><div class="inf-plat plat-tt"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.13a8.16 8.16 0 004.76 1.53v-3.5a4.84 4.84 0 01-1-.47z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+   <div class="inf-card" data-cat="tech"><div class="inf-top"><div class="inf-ava inf-ava-4">K</div><div class="inf-info"><h4>Tech Karim</h4><p>@tech.karim.dz</p><div class="inf-tag">Tech · Annaba</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">11.1K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">6.4%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">710</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+   <div class="inf-card" data-cat="fitness"><div class="inf-top"><div class="inf-ava inf-ava-5">F</div><div class="inf-info"><h4>FitDZ Coach</h4><p>@fitdz.coach</p><div class="inf-tag">Fitness · Blida</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">8.7K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">12.1%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">1.0K</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><div class="inf-plat plat-tt"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.13a8.16 8.16 0 004.76 1.53v-3.5a4.84 4.84 0 01-1-.47z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+   <div class="inf-card" data-cat="beauty"><div class="inf-top"><div class="inf-ava inf-ava-6">N</div><div class="inf-info"><h4>Nour Skincare</h4><p>@nour.skincare.dz</p><div class="inf-tag">Beauté · Tlemcen</div></div></div><div class="inf-mid"><div class="inf-metric"><div class="inf-metric-val">5.3K</div><div class="inf-metric-label">Abonnés</div></div><div class="inf-metric"><div class="inf-metric-val">14.7%</div><div class="inf-metric-label">Engagement</div></div><div class="inf-metric"><div class="inf-metric-val">780</div><div class="inf-metric-label">Likes</div></div></div><div class="inf-bot"><div class="inf-platforms"><div class="inf-plat plat-ig"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></div><button class="inf-btn" onclick="openM('brand')">Collaborer</button></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+ <div class="container">
+  <div class="section-header-center">
+   <div class="stag"><div class="stag-dot"></div><span>Tarifs</span></div>
+   <h2 class="section-title" data-fr="Des forfaits clairs, sans surprise" data-ar="باقات واضحة، بدون مفاجآت" data-en="Clear plans, no surprises">Des forfaits clairs, sans surprise</h2>
+   <p class="section-desc" data-fr="Choisissez le pack adapté à votre objectif." data-ar="اختر الباقة المناسبة لهدفك." data-en="Choose the pack that fits your goal.">Choisissez le pack adapté à votre objectif.</p>
+  </div>
+  <div class="pricing-row">
+   <div class="price-card"><div class="price-name">Starter</div><div class="price-label">Idéal pour tester</div><div class="price-val">25K <span>DZD</span></div><div class="price-per">par campagne</div><ul class="price-feat"><li>3 micro-influenceurs</li><li>1 plateforme (Instagram)</li><li>Stories + 1 Reel</li><li>Rapport de base</li><li>Support WhatsApp</li></ul><button class="btn-navy-outline" onclick="openM('brand')">Commencer</button></div>
+   <div class="price-card featured"><div class="price-badge">Populaire</div><div class="price-name">Growth</div><div class="price-label">Résultats visibles</div><div class="price-val">60K <span>DZD</span></div><div class="price-per">par campagne</div><ul class="price-feat"><li>7 micro-influenceurs</li><li>Multi-plateforme</li><li>Stories + Posts + Reels</li><li>Rapport détaillé + ROI</li><li>Brief créatif inclus</li><li>Support prioritaire</li></ul><button class="btn-primary" onclick="openM('brand')" style="width:100%;justify-content:center">Commencer</button></div>
+   <div class="price-card"><div class="price-name">Scale</div><div class="price-label">Campagne à fort impact</div><div class="price-val">120K <span>DZD</span></div><div class="price-per">par campagne</div><ul class="price-feat"><li>15+ créateurs</li><li>Toutes plateformes</li><li>Contenu UGC illimité</li><li>Stratégie sur-mesure</li><li>Analytics avancés</li><li>Account manager dédié</li></ul><button class="btn-navy-outline" onclick="openM('brand')">Nous contacter</button></div>
+  </div>
+ </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+ <div class="container">
+  <div class="section-header-center">
+   <div class="stag"><div class="stag-dot"></div><span>Témoignages</span></div>
+   <h2 class="section-title" data-fr="Ce que disent nos partenaires" data-ar="ماذا يقول شركاؤنا" data-en="What our partners say">Ce que disent nos partenaires</h2>
+  </div>
+  <div class="testi-grid">
+   <div class="testi-card"><div class="testi-stars"><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span></div><p class="testi-text">5 micro-influenceurs pour notre restaurant ont généré plus de résultats qu'une pub Facebook à 50 000 DZD. Le ROI est incomparable.</p><div class="testi-author"><div class="testi-ava" style="background:var(--orange)">K</div><div><div class="testi-name">Karim B.</div><div class="testi-role">Restaurateur — Alger</div></div></div></div>
+   <div class="testi-card"><div class="testi-stars"><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span></div><p class="testi-text">Enfin une plateforme qui comprend le marché algérien. Les créateurs proposés étaient parfaitement alignés avec notre image de marque.</p><div class="testi-author"><div class="testi-ava" style="background:var(--blue)">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Fondatrice — DZ Cosmetics</div></div></div></div>
+   <div class="testi-card"><div class="testi-stars"><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span><span class="testi-star">&#9733;</span></div><p class="testi-text">Grâce à Influzy, j'ai décroché mes premières collaborations payées. Le process est clair, rapide et respectueux du créateur.</p><div class="testi-author"><div class="testi-ava" style="background:#22C55E">A</div><div><div class="testi-name">Ahmed R.</div><div class="testi-role">Créateur Lifestyle — 8K abonnés</div></div></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+ <div class="container"><div class="cta-inner">
+  <h2 data-fr="Prêt à activer la <em>micro-influence</em> ?" data-ar="مستعد لتفعيل <em>التأثير المصغر</em>؟" data-en="Ready to activate <em>micro-influence</em>?">Prêt à activer la <em>micro-influence</em> ?</h2>
+  <p class="cta-desc" data-fr="Rejoignez les marques algériennes qui misent sur l'authenticité plutôt que le reach." data-ar="انضم للعلامات التجارية الجزائرية التي تراهن على المصداقية بدل الوصول." data-en="Join Algerian brands that bet on authenticity over reach.">Rejoignez les marques algériennes qui misent sur l'authenticité plutôt que le reach.</p>
+  <div class="cta-btns">
+   <button class="btn-primary" onclick="openM('brand')">Lancer une campagne <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+   <button class="btn-outline" onclick="openM('creator')">Devenir créateur</button>
+  </div>
+ </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <div class="container">
+  <div class="foot-grid">
+   <div class="foot-brand"><a href="index.html" class="logo">influ<i>zy</i></a><p>La première plateforme de micro-influence en Algérie. On connecte les marques aux créateurs authentiques pour des campagnes à fort impact.</p></div>
+   <div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+   <div><h4>Services</h4><ul><li><a href="#catalog">Catalogue</a></li><li><a href="#pricing">Tarifs</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="/cdn-cgi/l/email-protection#0e6d61607a6f6d7a4e676068627b7477206a74"><span class="__cf_email__" data-cfemail="5c3f3332283d3f281c35323a30292625723826">[email&#160;protected]</span></a></li><li><a href="contact.html">Formulaire</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>&copy; 2025 Influzy. Tous droits réservés.</span><div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+ </div>
+</footer>
+
+<!-- MODAL BRAND -->
+<div class="modal-bg" id="mBrand">
+ <div class="modal-box">
+  <button class="modal-x" onclick="closeM('brand')">&#10005;</button>
+  <h2>Lancer une campagne</h2>
+  <p class="modal-sub">Remplissez ce formulaire — on vous recontacte sous 24h.</p>
+  <div class="field"><label>Marque / Entreprise</label><input type="text" placeholder="Ex: DZ Cosmetics"></div>
+  <div class="field"><label>Nom complet</label><input type="text" placeholder="Ex: Karim Benali"></div>
+  <div class="field"><label>Téléphone</label><input type="tel" placeholder="0555 XX XX XX"></div>
+  <div class="field"><label>Email</label><input type="email" placeholder="contact@marque.dz"></div>
+  <div class="field"><label>Secteur</label><select><option value="">—</option><option>Beauté / Cosmétiques</option><option>Food / Restaurants</option><option>Mode / Vêtements</option><option>Tech / Électronique</option><option>Services</option><option>E-commerce</option><option>Autre</option></select></div>
+  <div class="field"><label>Budget estimé</label><select><option value="">—</option><option>&lt; 25 000 DZD</option><option>25 000 – 60 000 DZD</option><option>60 000 – 120 000 DZD</option><option>&gt; 120 000 DZD</option></select></div>
+  <div class="field"><label>Décrivez votre projet</label><textarea placeholder="Ex: Promouvoir notre nouvelle gamme de produits naturels..."></textarea></div>
+  <button class="modal-submit" onclick="submitForm(this)">Envoyer ma demande</button>
+ </div>
+</div>
+
+<!-- MODAL CREATOR -->
+<div class="modal-bg" id="mCreator">
+ <div class="modal-box">
+  <button class="modal-x" onclick="closeM('creator')">&#10005;</button>
+  <h2>Rejoindre Influzy</h2>
+  <p class="modal-sub">Inscris-toi et commence à recevoir des opportunités.</p>
+  <div class="field"><label>Nom complet</label><input type="text" placeholder="Ex: Amina Boudiaf"></div>
+  <div class="field"><label>Pseudo principal</label><input type="text" placeholder="@amina.beautydz"></div>
+  <div class="field"><label>Téléphone</label><input type="tel" placeholder="0555 XX XX XX"></div>
+  <div class="field"><label>Email</label><input type="email" placeholder="amina@gmail.com"></div>
+  <div class="field"><label>Plateforme principale</label><select><option value="">—</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>YouTube</option><option>Plusieurs</option></select></div>
+  <div class="field"><label>Nombre d'abonnés</label><select><option value="">—</option><option>1K – 5K</option><option>5K – 10K</option><option>10K – 25K</option><option>25K – 50K</option><option>50K+</option></select></div>
+  <div class="field"><label>Niche</label><select><option value="">—</option><option>Beauté</option><option>Food</option><option>Mode / Lifestyle</option><option>Tech / Gaming</option><option>Fitness</option><option>Humour</option><option>Voyage</option><option>Autre</option></select></div>
+  <div class="field"><label>Wilaya</label><input type="text" placeholder="Alger, Oran, Sétif..."></div>
+  <button class="modal-submit" onclick="submitForm(this)">Rejoindre Influzy</button>
+ </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f19c9736e3dba8d',t:'MTc3NzA4Mjc3MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

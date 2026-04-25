@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FAQ — Influzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="lang-bar"><button class="active" onclick="setLang('fr',this)">FR</button><button onclick="setLang('ar',this)">عربي</button><button onclick="setLang('en',this)">EN</button></div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+</div>
+
+<nav id="nav">
+ <div class="nav-inner">
+  <a href="index.html" class="logo">influ<i>zy</i></a>
+  <div class="nav-menu" id="navMenu">
+   <a href="about.html">À propos</a>
+   <a href="index.html#catalog">Créateurs</a>
+   <a href="blog.html">Blog</a>
+   <a href="faq.html">FAQ</a>
+   <a href="contact.html">Contact</a>
+   <a href="index.html#pricing" class="nav-cta">Lancer une campagne <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+  <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+ </div>
+</nav>
+
+<section class="page-hero">
+ <div class="container">
+  <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>FAQ</span></div>
+  <h1 data-fr="Questions <em>fréquentes</em>" data-ar="أسئلة <em>شائعة</em>" data-en="Frequently asked <em>questions</em>">Questions <em>fréquentes</em></h1>
+  <p data-fr="Tout ce que vous devez savoir sur Influzy et le marketing d'influence." data-ar="كل ما تحتاج معرفته عن Influzy والتسويق عبر المؤثرين." data-en="Everything you need to know about Influzy and influencer marketing.">Tout ce que vous devez savoir sur Influzy et le marketing d'influence.</p>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="section-header-center">
+   <div class="stag"><div class="stag-dot"></div><span data-fr="Pour les marques" data-ar="للعلامات التجارية" data-en="For brands">Pour les marques</span></div>
+   <h2 class="section-title" data-fr="Questions marques" data-ar="أسئلة العلامات التجارية" data-en="Brand questions">Questions marques</h2>
+  </div>
+  <div class="faq-list">
+
+   <div class="faq-item">
+    <div class="faq-q"><span data-fr="C'est quoi un micro-influenceur ?" data-ar="ما هو المؤثر الصغير؟" data-en="What is a micro-influencer?">C'est quoi un micro-influenceur ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a"><div class="faq-a-inner" data-fr="Un micro-influenceur est un créateur de contenu qui possède entre 1 000 et 50 000 abonnés sur les réseaux sociaux. Leur force ? Un taux d'engagement souvent 3 à 5 fois supérieur aux macro-influenceurs, et une relation plus authentique avec leur communauté." data-ar="المؤثر الصغير هو صانع محتوى يملك بين 1,000 و50,000 متابع على وسائل التواصل الاجتماعي. قوته؟ نسبة تفاعل أعلى بـ 3 إلى 5 مرات من المؤثرين الكبار، وعلاقة أكثر مصداقية مع مجتمعه." data-en="A micro-influencer is a content creator with between 1,000 and 50,000 followers on social media. Their strength? An engagement rate often 3 to 5 times higher than macro-influencers, and a more authentic relationship with their community.">Un micro-influenceur est un créateur de contenu qui possède entre 1 000 et 50 000 abonnés sur les réseaux sociaux. Leur force ? Un taux d'engagement souvent 3 à 5 fois supérieur aux macro-influenceurs, et une relation plus authentique avec leur communauté.</div></div>
+   </div>
+
+   <div class="faq-item">
+    <div class="faq-q"><span data-fr="Combien coûte une campagne ?" data-ar="كم تكلف الحملة؟" data-en="How much does a campaign cost?">Combien coûte une campagne ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a"><div class="faq-a-inner" data-fr="Nos forfaits commencent à 25 000 DZD (pack Starter avec 3 micro-influenceurs). Le pack Growth à 60 000 DZD est le plus populaire. Pour des campagnes sur-mesure, consultez notre page tarifs ou contactez-nous." data-ar="باقاتنا تبدأ من 25,000 دج (باقة Starter مع 3 مؤثرين صغار). باقة Growth بـ 60,000 دج هي الأكثر شعبية. للحملات المخصصة، راجع صفحة الأسعار أو تواصل معنا." data-en="Our plans start at 25,000 DZD (Starter pack with 3 micro-influencers). The Growth pack at 60,000 DZD is the most popular. For custom campaigns, check our pricing page or contact us.">Nos forfaits commencent à 25 000 DZD (pack Starter avec 3 micro-influenceurs). Le pack Growth à 60 000 DZD est le plus populaire. Pour des campagnes sur-mesure, consultez notre page tarifs ou contactez-nous.</div></div>
+   </div>
+
+   <div class="faq-item">
+    <div class="faq-q"><span data-fr="Comment sont vérifiés les influenceurs ?" data-ar="كيف يتم التحقق من المؤثرين؟" data-en="How are influencers verified?">Comment sont vérifiés les influenceurs ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a"><div class="faq-a-inner" data-fr="Chaque profil est audité : nous vérifions l'authenticité des abonnés (détection de bots), le taux d'engagement réel, la qualité du contenu, et la cohérence de l'audience avec la niche revendiquée." data-ar="يتم تدقيق كل ملف: نتحقق من مصداقية المتابعين (كشف البوتات)، نسبة التفاعل الحقيقية، جودة المحتوى، وتوافق الجمهور مع التخصص المعلن." data-en="Each profile is audited: we verify follower authenticity (bot detection), real engagement rate, content quality, and audience consistency with the claimed niche.">Chaque profil est audité : nous vérifions l'authenticité des abonnés (détection de bots), le taux d'engagement réel, la qualité du contenu, et la cohérence de l'audience avec la niche revendiquée.</div></div>
+   </div>
+
+   <div class="faq-item">
+    <div class="faq-q"><span data-fr="Quels types de contenu sont proposés ?" data-ar="ما أنواع المحتوى المقترحة؟" data-en="What types of content are offered?">Quels types de contenu sont proposés ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a"><div class="faq-a-inner" data-fr="Stories Instagram, Reels, Posts feed, vidéos TikTok, vidéos YouTube, posts Facebook, contenu UGC (User Generated Content). Le format dépend de votre objectif et du pack choisi." data-ar="ستوريز انستغرام، ريلز، منشورات، فيديوهات تيك توك، فيديوهات يوتيوب، منشورات فيسبوك، محتوى UGC. الصيغة تعتمد على هدفك والباقة المختارة." data-en="Instagram Stories, Reels, Feed Posts, TikTok videos, YouTube videos, Facebook posts, UGC (User Generated Content). The format depends on your goal and chosen pack.">Stories Instagram, Reels, Posts feed, vidéos TikTok, vidéos YouTube, posts Facebook, contenu UGC (User Generated Content). Le format dépend de votre objectif et du pack choisi.</div></div>
+   </div>
+
+   <div class="faq-item">
+    <div class="faq-q"><span data-fr="Comment je paye ?" data-ar="كيف أدفع؟" data-en="How do I pay?">Comment je paye ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a"><div class="faq-a-inner" data-fr="Nous acceptons le virement bancaire, CCP, BaridiMob et le paiement en espèces pour les clients locaux. Le paiement se fait après validation du brief et avant le lancement de la campagne." data-ar="نقبل التحويل البنكي، CCP، BaridiMob والدفع نقداً للعملاء المحليين. يتم الدفع بعد الموافقة على الملخص وقبل إطلاق الحملة." data-en="We accept bank transfers, CCP, BaridiMob and cash for local clients. Payment is made after brief approval and before campaign launch.">Nous acceptons le virement bancaire, CCP, BaridiMob et le paiement en espèces pour les clients locaux. Le paiement se fait après validation du brief et avant le lancement de la campagne.</div></div>
+   </div>
+
+  </div>
+
+  <div style="margin-top:64px">
+   <div class="section-header-center">
+    <div class="stag" style="background:rgba(255,107,44,.08);color:var(--orange)"><div class="stag-dot" style="background:var(--orange)"></div><span data-fr="Pour les créateurs" data-ar="لصناع المحتوى" data-en="For creators">Pour les créateurs</span></div>
+    <h2 class="section-title" data-fr="Questions créateurs" data-ar="أسئلة صناع المحتوى" data-en="Creator questions">Questions créateurs</h2>
+   </div>
+   <div class="faq-list">
+
+    <div class="faq-item">
+     <div class="faq-q"><span data-fr="C'est gratuit de s'inscrire ?" data-ar="هل التسجيل مجاني؟" data-en="Is it free to sign up?">C'est gratuit de s'inscrire ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+     <div class="faq-a"><div class="faq-a-inner" data-fr="Oui, 100% gratuit ! Vous vous inscrivez, on vérifie votre profil, et vous commencez à recevoir des propositions de collaboration. Aucun frais caché." data-ar="نعم، مجاني 100%! تسجل، نتحقق من ملفك، وتبدأ في تلقي عروض التعاون. لا رسوم مخفية." data-en="Yes, 100% free! You sign up, we verify your profile, and you start receiving collaboration proposals. No hidden fees.">Oui, 100% gratuit ! Vous vous inscrivez, on vérifie votre profil, et vous commencez à recevoir des propositions de collaboration. Aucun frais caché.</div></div>
+    </div>
+
+    <div class="faq-item">
+     <div class="faq-q"><span data-fr="Combien d'abonnés faut-il minimum ?" data-ar="كم عدد المتابعين المطلوب كحد أدنى؟" data-en="What's the minimum follower count?">Combien d'abonnés faut-il minimum ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+     <div class="faq-a"><div class="faq-a-inner" data-fr="À partir de 1 000 abonnés avec un bon taux d'engagement. La qualité prime sur la quantité. Si votre communauté est engagée et authentique, vous êtes le bienvenu." data-ar="ابتداءً من 1,000 متابع مع نسبة تفاعل جيدة. الجودة أهم من الكمية. إذا كان مجتمعك متفاعلاً وحقيقياً، فأنت مرحب بك." data-en="From 1,000 followers with a good engagement rate. Quality over quantity. If your community is engaged and authentic, you're welcome.">À partir de 1 000 abonnés avec un bon taux d'engagement. La qualité prime sur la quantité. Si votre communauté est engagée et authentique, vous êtes le bienvenu.</div></div>
+    </div>
+
+    <div class="faq-item">
+     <div class="faq-q"><span data-fr="Comment suis-je payé ?" data-ar="كيف أحصل على أجري؟" data-en="How do I get paid?">Comment suis-je payé ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+     <div class="faq-a"><div class="faq-a-inner" data-fr="Le paiement est effectué dans les 7 jours suivant la publication du contenu validé. Nous payons par virement, CCP ou BaridiMob selon votre préférence." data-ar="يتم الدفع خلال 7 أيام بعد نشر المحتوى المعتمد. ندفع عبر تحويل بنكي، CCP أو BaridiMob حسب تفضيلك." data-en="Payment is made within 7 days after the approved content is published. We pay via bank transfer, CCP or BaridiMob based on your preference.">Le paiement est effectué dans les 7 jours suivant la publication du contenu validé. Nous payons par virement, CCP ou BaridiMob selon votre préférence.</div></div>
+    </div>
+
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="cta-section">
+ <div class="container">
+  <div class="cta-inner">
+   <h2 data-fr="Encore des questions ?" data-ar="لا يزال لديك أسئلة؟" data-en="Still have questions?">Encore des questions ?</h2>
+   <p class="cta-desc" data-fr="Notre équipe est disponible pour répondre à toutes vos interrogations." data-ar="فريقنا متاح للإجابة على جميع أسئلتك." data-en="Our team is available to answer all your questions.">Notre équipe est disponible pour répondre à toutes vos interrogations.</p>
+   <div class="cta-btns"><a href="contact.html" class="btn-primary" data-fr="Nous contacter" data-ar="اتصل بنا" data-en="Contact us">Nous contacter <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="foot-grid">
+   <div class="foot-brand"><a href="index.html" class="logo">influ<i>zy</i></a><p>La première plateforme de micro-influence en Algérie.</p></div>
+   <div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+   <div><h4>Services</h4><ul><li><a href="index.html#catalog">Catalogue</a></li><li><a href="index.html#pricing">Tarifs</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="/cdn-cgi/l/email-protection#71121e1f0510120531181f171d040b085f150b"><span class="__cf_email__" data-cfemail="1e7d71706a7f7d6a5e777078726b6467307a64">[email&#160;protected]</span></a></li><li><a href="contact.html">Formulaire</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>&copy; 2025 Influzy.</span><div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+ </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f19d4b8af84282a',t:'MTc3NzA4MzIzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

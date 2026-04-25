@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Blog — Influzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="toolbar">
+  <div class="lang-bar"><button class="active" onclick="setLang('fr',this)">FR</button><button onclick="setLang('ar',this)">عربي</button><button onclick="setLang('en',this)">EN</button></div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+</div>
+
+<nav id="nav">
+ <div class="nav-inner">
+  <a href="index.html" class="logo">influ<i>zy</i></a>
+  <div class="nav-menu" id="navMenu">
+   <a href="about.html">À propos</a>
+   <a href="index.html#catalog">Créateurs</a>
+   <a href="blog.html">Blog</a>
+   <a href="faq.html">FAQ</a>
+   <a href="contact.html">Contact</a>
+   <a href="index.html#pricing" class="nav-cta">Lancer une campagne <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+  <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+ </div>
+</nav>
+
+<section class="page-hero">
+ <div class="container">
+  <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Blog</span></div>
+  <h1 data-fr="Le blog <em>Influzy</em>" data-ar="مدونة <em>Influzy</em>" data-en="The <em>Influzy</em> blog">Le blog <em>Influzy</em></h1>
+  <p data-fr="Tips, études de cas et actualités du marketing d'influence en Algérie." data-ar="نصائح، دراسات حالة وأخبار التسويق عبر المؤثرين في الجزائر." data-en="Tips, case studies and influencer marketing news in Algeria.">Tips, études de cas et actualités du marketing d'influence en Algérie.</p>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="blog-grid">
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-1">&#9997;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Guide" data-ar="دليل" data-en="Guide">Guide</div>
+     <h3 data-fr="Micro-influenceur vs macro : pourquoi le petit bat le grand en Algérie" data-ar="مؤثر صغير مقابل كبير: لماذا الصغير يتفوق في الجزائر" data-en="Micro vs macro influencer: why small beats big in Algeria">Micro-influenceur vs macro : pourquoi le petit bat le grand en Algérie</h3>
+     <p data-fr="Découvrez pourquoi les micro-influenceurs génèrent jusqu'à 5x plus d'engagement que les célébrités sur les réseaux sociaux algériens." data-ar="اكتشف لماذا يولّد المؤثرون الصغار تفاعلاً يصل إلى 5 أضعاف مقارنة بالمشاهير على وسائل التواصل الجزائرية." data-en="Discover why micro-influencers generate up to 5x more engagement than celebrities on Algerian social media.">Découvrez pourquoi les micro-influenceurs génèrent jusqu'à 5x plus d'engagement que les célébrités sur les réseaux sociaux algériens.</p>
+     <div class="blog-meta"><span>15 Juil 2025</span><span>5 min</span></div>
+    </div>
+   </div>
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-2">&#9733;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Étude de cas" data-ar="دراسة حالة" data-en="Case study">Étude de cas</div>
+     <h3 data-fr="Comment un restaurant à Alger a doublé ses clients grâce à 5 micro-influenceurs" data-ar="كيف ضاعف مطعم في الجزائر عملائه بفضل 5 مؤثرين صغار" data-en="How an Algiers restaurant doubled its clients with 5 micro-influencers">Comment un restaurant à Alger a doublé ses clients grâce à 5 micro-influenceurs</h3>
+     <p data-fr="Étude de cas complète : budget, sélection des créateurs, résultats. ROI de 340% en une campagne." data-ar="دراسة حالة كاملة: الميزانية، اختيار المبدعين، النتائج. عائد استثمار 340% في حملة واحدة." data-en="Full case study: budget, creator selection, results. 340% ROI in one campaign.">Étude de cas complète : budget, sélection des créateurs, résultats. ROI de 340% en une campagne.</p>
+     <div class="blog-meta"><span>10 Juil 2025</span><span>8 min</span></div>
+    </div>
+   </div>
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-3">&#9881;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Tendances" data-ar="اتجاهات" data-en="Trends">Tendances</div>
+     <h3 data-fr="TikTok en Algérie : les chiffres que les marques doivent connaître en 2025" data-ar="تيك توك في الجزائر: الأرقام التي يجب أن تعرفها العلامات التجارية في 2025" data-en="TikTok in Algeria: the numbers brands need to know in 2025">TikTok en Algérie : les chiffres que les marques doivent connaître en 2025</h3>
+     <p data-fr="Explosion de TikTok, nouveaux formats, opportunités pour les PME algériennes. Tour d'horizon complet." data-ar="انفجار تيك توك، صيغ جديدة، فرص للمؤسسات الصغيرة الجزائرية. نظرة شاملة." data-en="TikTok explosion, new formats, opportunities for Algerian SMEs. Complete overview.">Explosion de TikTok, nouveaux formats, opportunités pour les PME algériennes. Tour d'horizon complet.</p>
+     <div class="blog-meta"><span>5 Juil 2025</span><span>6 min</span></div>
+    </div>
+   </div>
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-4">&#9878;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Guide" data-ar="دليل" data-en="Guide">Guide</div>
+     <h3 data-fr="Comment rédiger un brief influenceur efficace : template gratuit" data-ar="كيف تكتب ملخصاً فعالاً للمؤثر: قالب مجاني" data-en="How to write an effective influencer brief: free template">Comment rédiger un brief influenceur efficace : template gratuit</h3>
+     <p data-fr="Un bon brief = un bon contenu. Voici notre méthode en 5 étapes + un template téléchargeable gratuitement." data-ar="ملخص جيد = محتوى جيد. إليك طريقتنا في 5 خطوات + قالب قابل للتحميل مجاناً." data-en="A good brief = good content. Here's our 5-step method + a free downloadable template.">Un bon brief = un bon contenu. Voici notre méthode en 5 étapes + un template téléchargeable gratuitement.</p>
+     <div class="blog-meta"><span>28 Juin 2025</span><span>4 min</span></div>
+    </div>
+   </div>
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-5">&#9889;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Conseils" data-ar="نصائح" data-en="Tips">Conseils</div>
+     <h3 data-fr="5 erreurs que font les marques algériennes avec le marketing d'influence" data-ar="5 أخطاء ترتكبها العلامات التجارية الجزائرية في التسويق عبر المؤثرين" data-en="5 mistakes Algerian brands make with influencer marketing">5 erreurs que font les marques algériennes avec le marketing d'influence</h3>
+     <p data-fr="De la course aux abonnés au manque de brief, voici les pièges à éviter absolument pour réussir vos campagnes." data-ar="من السباق نحو المتابعين إلى غياب الملخص، إليك الأخطاء التي يجب تجنبها لنجاح حملاتك." data-en="From chasing followers to lacking a brief, here are the pitfalls to avoid for successful campaigns.">De la course aux abonnés au manque de brief, voici les pièges à éviter absolument pour réussir vos campagnes.</p>
+     <div class="blog-meta"><span>20 Juin 2025</span><span>7 min</span></div>
+    </div>
+   </div>
+
+   <div class="blog-card">
+    <div class="blog-thumb blog-thumb-6">&#9829;</div>
+    <div class="blog-body">
+     <div class="blog-tag" data-fr="Créateurs" data-ar="صناع المحتوى" data-en="Creators">Créateurs</div>
+     <h3 data-fr="Comment devenir micro-influenceur en Algérie : guide complet 2025" data-ar="كيف تصبح مؤثراً صغيراً في الجزائر: دليل شامل 2025" data-en="How to become a micro-influencer in Algeria: complete 2025 guide">Comment devenir micro-influenceur en Algérie : guide complet 2025</h3>
+     <p data-fr="Du choix de la niche à la monétisation, tout ce qu'il faut savoir pour lancer et développer sa présence en ligne." data-ar="من اختيار التخصص إلى التسويق، كل ما تحتاج معرفته لإطلاق وتطوير حضورك الرقمي." data-en="From choosing a niche to monetization, everything you need to know to launch and grow your online presence.">Du choix de la niche à la monétisation, tout ce qu'il faut savoir pour lancer et développer sa présence en ligne.</p>
+     <div class="blog-meta"><span>12 Juin 2025</span><span>10 min</span></div>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section class="cta-section">
+ <div class="container">
+  <div class="cta-inner">
+   <h2 data-fr="Prêt à lancer votre <em>campagne</em> ?" data-ar="مستعد لإطلاق <em>حملتك</em>؟" data-en="Ready to launch your <em>campaign</em>?">Prêt à lancer votre <em>campagne</em> ?</h2>
+   <p class="cta-desc" data-fr="Rejoignez les marques qui misent sur l'authenticité." data-ar="انضم للعلامات التجارية التي تراهن على المصداقية." data-en="Join brands that bet on authenticity.">Rejoignez les marques qui misent sur l'authenticité.</p>
+   <div class="cta-btns"><a href="index.html#pricing" class="btn-primary">Voir les tarifs <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="contact.html" class="btn-outline">Nous contacter</a></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="foot-grid">
+   <div class="foot-brand"><a href="index.html" class="logo">influ<i>zy</i></a><p>La première plateforme de micro-influence en Algérie.</p></div>
+   <div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+   <div><h4>Services</h4><ul><li><a href="index.html#catalog">Catalogue</a></li><li><a href="index.html#pricing">Tarifs</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="/cdn-cgi/l/email-protection#e5868a8b91848691a58c8b8389909f9ccb819f"><span class="__cf_email__" data-cfemail="adcec2c3d9ccced9edc4c3cbc1d8d7d483c9d7">[email&#160;protected]</span></a></li><li><a href="contact.html">Formulaire</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>&copy; 2025 Influzy.</span><div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+ </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f19c8524b88ba96',t:'MTc3NzA4MjcyNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

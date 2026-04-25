@@ -3,149 +3,619 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Influzy — Algeria's First Micro-Influencer Platform</title>
-<link rel="stylesheet" href="style.css">
+<title>Influzy — Algeria's #1 Micro-Influencer Platform</title>
+<meta name="description" content="Connect your brand with verified Algerian micro-influencers. Launch campaigns, track results, grow your business.">
+<style>
+:root{--bg:#07070D;--bg2:#0F0F18;--bg3:#161622;--bg4:#1E1E2E;--accent:#FF6B2C;--accent2:#FF8F5E;--accentG:linear-gradient(135deg,#FF6B2C,#FF8F5E);--blue:#3B82F6;--green:#22C55E;--red:#EF4444;--text:#F1F1F6;--text2:#9898B0;--text3:#555570;--border:#252535;--border2:#353548;--glow:0 0 60px rgba(255,107,44,.07);--tr:all .3s cubic-bezier(.4,0,.2,1)}
+[data-t="l"]{--bg:#FFF;--bg2:#F8F9FC;--bg3:#EFF0F6;--bg4:#E4E5EE;--text:#0F0F18;--text2:#555570;--text3:#9898B0;--border:#E4E5EE;--border2:#D2D3DE;--glow:0 0 60px rgba(255,107,44,.04)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .4s,color .4s}
+a{text-decoration:none;color:inherit;cursor:pointer}ul{list-style:none}
+.w{max-width:1200px;margin:0 auto;padding:0 28px}
+.page{display:none}.page.on{display:block}
+.hl{background:var(--accentG);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cen{text-align:center}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:900;transition:var(--tr)}
+nav.s{background:rgba(7,7,13,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+[data-t="l"] nav.s{background:rgba(255,255,255,.9)}
+.ni{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-size:24px;font-weight:900;letter-spacing:-.5px;cursor:pointer}.logo b{color:var(--accent)}
+.nm{display:flex;align-items:center;gap:24px}
+.nm a{font-size:13px;font-weight:600;color:var(--text2);transition:var(--tr)}
+.nm a:hover{color:var(--text)}
+.ncta{padding:9px 20px;background:var(--accent);color:#fff!important;border-radius:8px;font-weight:700;font-size:12px;transition:var(--tr)}
+.ncta:hover{background:var(--accent2)}
+.nrt{display:flex;align-items:center;gap:8px}
+.tb{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;transition:var(--tr)}
+.tb:hover{border-color:var(--accent);color:var(--accent)}
+.lsw{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2)}
+.lsw button{border:none;background:none;padding:5px 10px;font-size:10px;font-weight:700;color:var(--text3);cursor:pointer;transition:var(--tr);letter-spacing:.5px}
+.lsw button.on{background:var(--accent);color:#fff}
+.burger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.burger span{width:20px;height:2px;background:var(--text);border-radius:2px}
+
+/* BTNS */
+.bm{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;transition:var(--tr);text-decoration:none}
+.bm:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,107,44,.25)}
+.bg{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:none;color:var(--text);border:1.5px solid var(--border2);border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none}
+.bg:hover{border-color:var(--accent);color:var(--accent)}
+.bo{display:block;width:100%;padding:12px;background:none;color:var(--text);border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;text-align:center;transition:var(--tr);text-decoration:none}
+.bo:hover{border-color:var(--accent);color:var(--accent)}
+
+/* SECTION */
+section{padding:100px 0}
+.stag{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border:1px solid var(--border);border-radius:5px;font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.st{font-size:44px;font-weight:900;letter-spacing:-1.5px;line-height:1.08;margin-bottom:16px}
+.sd{font-size:16px;color:var(--text2);max-width:520px;line-height:1.7}
+.cen .sd{margin:0 auto}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(255,107,44,.05) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;top:10%;right:5%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.03) 0%,transparent 70%);pointer-events:none}
+.hc{text-align:center;position:relative;z-index:2;max-width:900px;margin:0 auto}
+.hbdg{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid var(--border);border-radius:50px;margin-bottom:36px;background:var(--bg2)}
+.hdot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(34,197,94,.5);animation:glo 2s infinite}
+@keyframes glo{0%,100%{box-shadow:0 0 4px rgba(34,197,94,.5)}50%{box-shadow:0 0 16px rgba(34,197,94,.8)}}
+.hbdg span{font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:2px}
+.hero h1{font-size:62px;font-weight:900;line-height:1.04;letter-spacing:-2.5px;margin-bottom:28px}
+.hsub{font-size:18px;color:var(--text2);max-width:580px;margin:0 auto 44px;line-height:1.7}
+.hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:72px}
+.hst{display:flex;justify-content:center;gap:56px}
+.hs h3{font-size:44px;font-weight:900;letter-spacing:-1px}
+.hs h3 b{color:var(--accent)}
+.hs p{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+
+/* 3D FLOATING CARDS */
+.float-scene{position:absolute;width:100%;height:100%;top:0;left:0;pointer-events:none;z-index:1}
+.fcard{position:absolute;background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:16px 20px;backdrop-filter:blur(10px);display:flex;align-items:center;gap:10px;animation:fl 5s ease-in-out infinite}
+.fcard.f1{top:18%;left:5%;animation-delay:0s}
+.fcard.f2{top:25%;right:4%;animation-delay:1.5s}
+.fcard.f3{bottom:22%;left:8%;animation-delay:3s}
+.fcard.f4{bottom:18%;right:7%;animation-delay:.8s}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+.fci{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.fci-g{background:rgba(34,197,94,.1);color:var(--green)}
+.fci-o{background:rgba(255,107,44,.1);color:var(--accent)}
+.fci-b{background:rgba(59,130,246,.1);color:var(--blue)}
+.fci-p{background:rgba(168,85,247,.1);color:#A855F7}
+.fct{font-size:12px;font-weight:700;color:var(--text)}.fcs{font-size:10px;color:var(--text3)}
+
+/* 3D ORB */
+.orb-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;pointer-events:none;z-index:0;opacity:.15}
+.orb{width:100%;height:100%;border-radius:50%;background:conic-gradient(from 0deg,var(--accent),var(--blue),#A855F7,var(--accent));animation:spin 15s linear infinite;filter:blur(60px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* MARQUEE */
+.mq{padding:36px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
+.mq-l{text-align:center;font-size:10px;font-weight:800;color:var(--text3);text-transform:uppercase;letter-spacing:3px;margin-bottom:20px}
+.mq-t{display:flex;gap:56px;animation:msc 25s linear infinite;width:max-content}
+.mq-t span{font-size:18px;font-weight:800;color:var(--text3);white-space:nowrap;letter-spacing:2px;opacity:.5}
+@keyframes msc{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* GRID CARDS */
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.cc{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;transition:var(--tr);position:relative;overflow:hidden}
+.cc:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:var(--glow)}
+.cc-b{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:4px;letter-spacing:.5px}
+.cc-av{width:68px;height:68px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:var(--accent);margin:0 auto 12px;background:rgba(255,107,44,.06)}
+.cc h4{font-size:14px;font-weight:700;margin-bottom:2px}
+.cc-h{font-size:10px;color:var(--text3);margin-bottom:8px}
+.cc-sts{display:flex;justify-content:center;gap:14px;margin-bottom:10px}
+.cc-s{text-align:center}.cc-s strong{font-size:13px;font-weight:800;display:block}.cc-s span{font-size:8px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
+.cc-v{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--green);font-weight:600}
+.cc-v::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green)}
+.cc-n{display:inline-block;margin-top:6px;padding:2px 8px;background:var(--bg4);border-radius:4px;font-size:9px;color:var(--text2)}
+.cc-cta{display:block;width:100%;margin-top:12px;padding:9px;background:rgba(255,107,44,.06);border:1px solid rgba(255,107,44,.12);color:var(--accent);border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;transition:var(--tr);text-decoration:none;text-align:center}
+.cc-cta:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* PRICING */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.pc{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 20px;position:relative;transition:var(--tr)}
+.pc:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--glow)}
+.pc.pop{border-color:var(--accent);background:linear-gradient(180deg,rgba(255,107,44,.04),var(--bg2))}
+.pcbd{display:inline-block;padding:3px 10px;background:var(--accent);color:#fff;border-radius:4px;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.pcn{font-size:17px;font-weight:800;margin-bottom:4px}
+.pcpr{font-size:34px;font-weight:900;letter-spacing:-1px;margin-bottom:2px}
+.pcpr span{font-size:13px;font-weight:500;color:var(--text3)}
+.pcpd{font-size:11px;color:var(--text3);margin-bottom:20px}
+.pfl li{padding:7px 0;font-size:11px;color:var(--text2);border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.pfl li::before{content:'✓';color:var(--accent);font-weight:700;font-size:10px;flex-shrink:0}
+.pfl li.off{color:var(--text3);text-decoration:line-through;opacity:.35}
+.pfl li.off::before{content:'✕';color:var(--text3)}
+.pcbt{display:block;width:100%;padding:11px;margin-top:20px;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;transition:var(--tr);text-decoration:none}
+.pcbt:hover{border-color:var(--accent);color:var(--accent)}
+.pc.pop .pcbt{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pc.pop .pcbt:hover{background:var(--accent2)}
+
+/* HOW */
+.how{background:var(--bg2)}
+.htabs{display:flex;gap:4px;justify-content:center;margin:36px auto;background:var(--bg3);border-radius:10px;padding:4px;max-width:360px}
+.htab{flex:1;padding:9px;border:none;background:none;color:var(--text3);font-size:12px;font-weight:700;cursor:pointer;border-radius:8px;transition:var(--tr)}
+.htab.on{background:var(--accent);color:#fff}
+.hsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.hstp{text-align:center;padding:24px 16px}
+.hnum{width:38px;height:38px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--accent);margin:0 auto 14px}
+.hstp h4{font-size:14px;font-weight:700;margin-bottom:6px}
+.hstp p{font-size:11px;color:var(--text3);line-height:1.6}
+
+/* FEATURES */
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.ft{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:30px 22px;transition:var(--tr)}
+.ft:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--glow)}
+.ftic{width:44px;height:44px;border-radius:12px;background:rgba(255,107,44,.06);border:1px solid rgba(255,107,44,.1);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--accent);margin-bottom:16px}
+.ft h4{font-size:15px;font-weight:700;margin-bottom:6px}
+.ft p{font-size:12px;color:var(--text2);line-height:1.6}
+.fttg{display:inline-block;margin-top:12px;padding:3px 8px;background:rgba(255,107,44,.05);border:1px solid rgba(255,107,44,.08);border-radius:4px;font-size:9px;font-weight:700;color:var(--accent)}
+
+/* CTA */
+.cta{padding:120px 0;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(255,107,44,.02),var(--bg))}
+.cta *{position:relative;z-index:2}
+.cta h2{font-size:44px;font-weight:900;letter-spacing:-1.5px;margin-bottom:16px}
+.cta p{font-size:16px;color:var(--text2);margin-bottom:36px;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* INNER PAGE HERO */
+.ih{padding:140px 0 60px;text-align:center;position:relative;overflow:hidden}
+.ih::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,107,44,.03),transparent 70%)}
+.ih h1{font-size:40px;font-weight:900;letter-spacing:-1px;margin-bottom:10px;position:relative;z-index:2}
+.ih p{font-size:15px;color:var(--text2);position:relative;z-index:2;max-width:480px;margin:0 auto}
+.bc{display:flex;gap:8px;justify-content:center;margin-bottom:18px;font-size:11px;color:var(--text3);position:relative;z-index:2}
+.bc a:hover{color:var(--accent)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:56px 0 24px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.fb p{font-size:11px;color:var(--text3);line-height:1.7;margin-top:10px}
+footer h5{font-size:10px;font-weight:800;color:var(--text2);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+footer ul li{margin-bottom:7px}
+footer ul li a{font-size:12px;color:var(--text3);transition:var(--tr)}
+footer ul li a:hover{color:var(--accent)}
+.fbt{border-top:1px solid var(--border);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--text3)}
+
+/* ABOUT */
+.abg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.abt h2{font-size:26px;font-weight:900;margin-bottom:12px}
+.abt p{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:12px}
+.abx{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:44px;text-align:center}
+.abx-big{font-size:60px;font-weight:900;color:var(--accent)}
+.abx-lbl{font-size:13px;color:var(--text2);margin-top:6px}
+.vg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.vc{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;transition:var(--tr)}
+.vc:hover{border-color:var(--accent);transform:translateY(-4px)}
+.vci{width:40px;height:40px;border-radius:10px;background:rgba(255,107,44,.06);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.vc h3{font-size:15px;font-weight:700;margin-bottom:5px}
+.vc p{font-size:12px;color:var(--text2);line-height:1.6}
+
+/* FAQ */
+.fql{max-width:680px;margin:36px auto 0}
+.fqi{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;transition:var(--tr)}
+.fqi:hover{border-color:var(--accent)}
+.fqq{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:13px;font-weight:700;background:var(--bg2)}
+.fqq:hover{color:var(--accent)}
+.fqic{font-size:16px;color:var(--text3);transition:transform .3s;flex-shrink:0}
+.fqi.open .fqic{transform:rotate(45deg);color:var(--accent)}
+.fqa{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--bg2)}
+.fqa-in{padding:0 18px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+
+/* CONTACT */
+.ctg{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:36px}
+.ctcs{display:flex;flex-direction:column;gap:12px}
+.ctc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;align-items:center;gap:12px;transition:var(--tr)}
+.ctc:hover{border-color:var(--accent)}
+.ctci{width:40px;height:40px;border-radius:10px;background:rgba(255,107,44,.06);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ctc h4{font-size:12px;font-weight:700;margin-bottom:2px}
+.ctc p{font-size:11px;color:var(--text3)}
+.ctf{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px}
+.ctf h3{font-size:18px;font-weight:800;margin-bottom:18px}
+
+/* BLOG */
+.blg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.blc{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:var(--tr)}
+.blc:hover{border-color:var(--accent);transform:translateY(-4px)}
+.blth{height:140px;display:flex;align-items:center;justify-content:center;font-size:40px;background:var(--bg3)}
+.blbd{padding:18px}
+.bltg{display:inline-block;padding:2px 8px;background:rgba(255,107,44,.06);border:1px solid rgba(255,107,44,.08);border-radius:3px;font-size:9px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.blc h3{font-size:14px;font-weight:700;margin-bottom:6px;line-height:1.4}
+.blc p{font-size:11px;color:var(--text2);line-height:1.5;margin-bottom:10px}
+.blm{display:flex;justify-content:space-between;font-size:10px;color:var(--text3)}
+
+/* FORMS */
+.fd{margin-bottom:12px}
+.fd label{display:block;font-size:9px;font-weight:800;color:var(--text2);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.fd input,.fd select,.fd textarea{width:100%;padding:10px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:12px;font-family:inherit;transition:var(--tr)}
+.fd input:focus,.fd select:focus,.fd textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,107,44,.08)}
+.fd textarea{resize:vertical;min-height:70px}
+.fd input::placeholder,.fd textarea::placeholder{color:var(--text3)}
+.fd select option{background:var(--bg2);color:var(--text)}
+.fdr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsb{width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;transition:var(--tr);margin-top:4px}
+.fsb:hover{background:var(--accent2)}
+
+/* STEPPER */
+.stepper{max-width:680px;margin:0 auto}
+.sbar{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:44px}
+.sdot{width:34px;height:34px;border-radius:50%;background:var(--bg3);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--text3);transition:var(--tr);cursor:pointer}
+.sdot.on{border-color:var(--accent);color:var(--accent);background:rgba(255,107,44,.06)}
+.sdot.done{border-color:var(--green);color:var(--green);background:rgba(34,197,94,.06)}
+.sline{width:36px;height:2px;background:var(--border);border-radius:1px}
+.sline.done{background:var(--green)}
+.spnl{display:none;animation:pop .3s ease}.spnl.on{display:block}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.spnl h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.spnl .ssub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.snav{display:flex;justify-content:space-between;margin-top:28px;gap:12px}
+.snav .bm,.snav .bg{flex:1;justify-content:center;font-size:13px;padding:12px 20px}
+
+/* JOIN */
+.jfg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0}
+.jf{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;transition:var(--tr)}
+.jf:hover{border-color:var(--accent)}
+.jfi{font-size:24px;margin-bottom:10px}
+.jf h4{font-size:13px;font-weight:700;margin-bottom:4px}
+.jf p{font-size:11px;color:var(--text2);line-height:1.5}
+.jform{max-width:580px;margin:0 auto;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px}
+.jform h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.jform .msub{font-size:12px;color:var(--text3);margin-bottom:24px}
+
+/* DASHBOARD */
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.ds{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;transition:var(--tr)}
+.ds:hover{border-color:var(--accent)}
+.ds h4{font-size:26px;font-weight:900;margin-bottom:3px}.ds h4 b{color:var(--accent)}
+.ds p{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
+.dtbl{width:100%;margin-top:18px;border-collapse:collapse}
+.dtbl th{text-align:left;font-size:10px;font-weight:800;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px;border-bottom:1px solid var(--border)}
+.dtbl td{padding:12px 14px;font-size:12px;border-bottom:1px solid var(--border);color:var(--text2)}
+.dtbl tr:hover td{background:var(--bg2)}
+.sts{display:inline-block;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700;text-transform:uppercase}
+.sts-a{background:rgba(34,197,94,.1);color:var(--green)}
+.sts-p{background:rgba(255,107,44,.1);color:var(--accent)}
+.sts-d{background:rgba(59,130,246,.1);color:var(--blue)}
+
+/* MODAL */
+.mob{display:none;position:fixed;inset:0;background:rgba(7,7,13,.7);backdrop-filter:blur(12px);z-index:2000;align-items:center;justify-content:center}
+.mob.open{display:flex}
+.mbox{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px;width:90%;max-width:440px;max-height:90vh;overflow-y:auto;position:relative;animation:pop .3s ease}
+.mx{position:absolute;top:12px;right:14px;background:none;border:none;font-size:16px;color:var(--text3);cursor:pointer;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.mx:hover{background:var(--bg3);color:var(--text)}
+.mbox h2{font-size:18px;font-weight:900;margin-bottom:3px}
+.msub{font-size:12px;color:var(--text3);margin-bottom:20px}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.hero h1{font-size:46px}.cgrid,.pgrid,.hsteps{grid-template-columns:1fr 1fr}.fgrid,.blg,.vg,.jfg{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.abg,.ctg{grid-template-columns:1fr}.dstats{grid-template-columns:1fr 1fr}.fdr{grid-template-columns:1fr}.float-scene{display:none}}
+@media(max-width:768px){.nm{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);padding:18px;flex-direction:column;gap:12px;border-bottom:1px solid var(--border)}.nm.open{display:flex}.burger{display:flex}.hero h1{font-size:32px}.hst{gap:20px;flex-wrap:wrap}.hs h3{font-size:30px}.cgrid,.pgrid,.hsteps,.fgrid,.blg,.vg,.jfg,.dstats{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.fbt{flex-direction:column;gap:8px;text-align:center}.st,.ih h1{font-size:28px}.cta h2{font-size:28px}.sbar{flex-wrap:wrap}.float-scene{display:none}}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="nav"><div class="nav-in">
- <a href="index.html" class="logo">influ<b>zy</b></a>
- <div class="n-links" id="nm">
-  <a href="page/about.html">About</a>
-  <a href="page/creators.html">Creators</a>
-  <a href="page/blog.html">Blog</a>
-  <a href="page/faq.html">FAQ</a>
-  <a href="page/contact.html">Contact</a>
-  <a class="n-cta" href="create-campaign.html">Get Started →</a>
+<nav id="nav"><div class="ni">
+ <span class="logo" onclick="go('home')">influ<b>zy</b></span>
+ <div class="nm" id="nm">
+  <a onclick="go('about')" data-i="nav_about">About</a>
+  <a onclick="go('creators')" data-i="nav_creators">Creators</a>
+  <a onclick="go('blog')" data-i="nav_blog">Blog</a>
+  <a onclick="go('faq')" data-i="nav_faq">FAQ</a>
+  <a onclick="go('contact')" data-i="nav_contact">Contact</a>
+  <a class="ncta" onclick="go('campaign')" data-i="nav_cta">Get Started →</a>
  </div>
- <div class="n-right">
-  <button class="t-btn" onclick="togT()" id="tBtn">☀</button>
-  <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+ <div class="nrt">
+  <div class="lsw">
+   <button class="on" onclick="setL('en',this)">EN</button>
+   <button onclick="setL('fr',this)">FR</button>
+   <button onclick="setL('ar',this)">عربي</button>
+  </div>
+  <button class="tb" onclick="togT()" id="tBtn">☀</button>
+  <div class="burger" onclick="document.getElementById('nm').classList.toggle('open')"><span></span><span></span><span></span></div>
  </div>
 </div></nav>
 
-<!-- HERO -->
+<!-- ========== HOME ========== -->
+<div class="page on" id="p-home">
 <section class="hero">
- <div class="wrap"><div class="h-content">
-  <div class="h-badge"><div class="h-dot"></div><span>Algeria's First Platform</span></div>
-  <h1>CONNECTING <span class="hl">BRANDS</span> WITH <span class="hl">MICRO-INFLUENCERS</span> IN ALGERIA.</h1>
-  <p class="h-sub">The first self-service platform to find, connect and launch campaigns with verified Algerian content creators. More authenticity. More engagement. Less budget wasted.</p>
-  <div class="h-btns">
-   <a href="create-campaign.html" class="btn-m">Start a Campaign →</a>
-   <a href="join.html" class="btn-g">Join as Creator</a>
+ <div class="orb-wrap"><div class="orb"></div></div>
+ <div class="float-scene">
+  <div class="fcard f1"><div class="fci fci-g">✓</div><div><div class="fct" data-i="fl_campaign">Campaign Approved</div><div class="fcs" data-i="fl_2min">2 min ago</div></div></div>
+  <div class="fcard f2"><div class="fci fci-o">$</div><div><div class="fct">+35,000 DZD</div><div class="fcs" data-i="fl_paid">Payment sent</div></div></div>
+  <div class="fcard f3"><div class="fci fci-b">◆</div><div><div class="fct" data-i="fl_match">New creator match</div><div class="fcs" data-i="fl_score">Score: 94%</div></div></div>
+  <div class="fcard f4"><div class="fci fci-p">♥</div><div><div class="fct" data-i="fl_engage">+2,847 engagements</div><div class="fcs" data-i="fl_today">Today</div></div></div>
+ </div>
+ <div class="w"><div class="hc">
+  <div class="hbdg"><div class="hdot"></div><span data-i="hero_badge">Algeria's First Platform</span></div>
+  <h1 data-i="hero_title">CONNECTING <span class="hl">BRANDS</span> WITH <span class="hl">MICRO-INFLUENCERS</span> IN ALGERIA.</h1>
+  <p class="hsub" data-i="hero_sub">The first self-service platform to find, connect and launch campaigns with verified Algerian content creators. More authenticity. More engagement. Less budget wasted.</p>
+  <div class="hbtns">
+   <a class="bm" onclick="go('campaign')" data-i="hero_cta1">Start a Campaign →</a>
+   <a class="bg" onclick="go('join')" data-i="hero_cta2">Join as Creator</a>
   </div>
-  <div class="h-stats">
-   <div class="h-stat"><h3><span class="ctr" data-v="500">0</span><b>+</b></h3><p>Active Creators</p></div>
-   <div class="h-stat"><h3><span class="ctr" data-v="48">0</span></h3><p>Wilayas Covered</p></div>
-   <div class="h-stat"><h3><span class="ctr" data-v="98">0</span><b>%</b></h3><p>Satisfaction</p></div>
+  <div class="hst">
+   <div class="hs"><h3><span class="ctr" data-v="500">0</span><b>+</b></h3><p data-i="stat_creators">Active Creators</p></div>
+   <div class="hs"><h3><span class="ctr" data-v="48">0</span></h3><p data-i="stat_wilayas">Wilayas Covered</p></div>
+   <div class="hs"><h3><span class="ctr" data-v="98">0</span><b>%</b></h3><p data-i="stat_satis">Satisfaction</p></div>
   </div>
  </div></div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee"><div class="marquee-l">Trusted By</div><div class="marquee-t"><span>OOREDOO</span><span>YASSIR</span><span>CONDOR</span><span>CAPRICE</span><span>CEVITAL</span><span>HAMOUD</span><span>IRIS</span><span>ASUS</span><span>OOREDOO</span><span>YASSIR</span><span>CONDOR</span><span>CAPRICE</span><span>CEVITAL</span><span>HAMOUD</span><span>IRIS</span><span>ASUS</span></div></div>
+<div class="mq"><div class="mq-l" data-i="mq_label">Trusted By</div><div class="mq-t"><span>OOREDOO</span><span>YASSIR</span><span>CONDOR</span><span>CAPRICE</span><span>CEVITAL</span><span>HAMOUD</span><span>IRIS</span><span>ASUS</span><span>CANON</span><span>OOREDOO</span><span>YASSIR</span><span>CONDOR</span><span>CAPRICE</span><span>CEVITAL</span><span>HAMOUD</span><span>IRIS</span><span>ASUS</span><span>CANON</span></div></div>
 
-<!-- CREATORS -->
-<section style="background:var(--bg2)">
- <div class="wrap">
-  <div class="cen">
-   <div class="sec-tag">New Talent</div>
-   <h2 class="sec-title">Recently Joined Creators</h2>
-   <p class="sec-desc">Discover our newest verified creators ready to collaborate on your next campaign.</p>
-  </div>
-  <div class="cr-grid">
-   <div class="cr-card"><div class="cr-badge">NEW</div><div class="cr-ava">A</div><h4>Amina Beauty</h4><div class="cr-handle">@amina.beautydz</div><div class="cr-stats"><div class="cr-st"><strong>14.2K</strong><span>Followers</span></div><div class="cr-st"><strong>8.3%</strong><span>Engage.</span></div></div><div class="cr-v">Verified</div><div class="cr-niche">Beauty · Algiers</div><a href="page/creators.html" class="cr-cta">View Profile</a></div>
-   <div class="cr-card"><div class="cr-badge">NEW</div><div class="cr-ava">Y</div><h4>Youcef Cuisine</h4><div class="cr-handle">@youcef.cuisine.dz</div><div class="cr-stats"><div class="cr-st"><strong>9.8K</strong><span>Followers</span></div><div class="cr-st"><strong>11.2%</strong><span>Engage.</span></div></div><div class="cr-v">Verified</div><div class="cr-niche">Food · Oran</div><a href="page/creators.html" class="cr-cta">View Profile</a></div>
-   <div class="cr-card"><div class="cr-badge">NEW</div><div class="cr-ava">L</div><h4>Lina Lifestyle</h4><div class="cr-handle">@lina.lifestyle.dz</div><div class="cr-stats"><div class="cr-st"><strong>7.5K</strong><span>Followers</span></div><div class="cr-st"><strong>9.6%</strong><span>Engage.</span></div></div><div class="cr-v">Verified</div><div class="cr-niche">Lifestyle · Sétif</div><a href="page/creators.html" class="cr-cta">View Profile</a></div>
-   <div class="cr-card"><div class="cr-badge">NEW</div><div class="cr-ava">K</div><h4>Tech Karim</h4><div class="cr-handle">@tech.karim.dz</div><div class="cr-stats"><div class="cr-st"><strong>11.1K</strong><span>Followers</span></div><div class="cr-st"><strong>6.4%</strong><span>Engage.</span></div></div><div class="cr-v">Verified</div><div class="cr-niche">Tech · Annaba</div><a href="page/creators.html" class="cr-cta">View Profile</a></div>
-  </div>
-  <p style="text-align:center;margin-top:28px;font-size:13px;color:var(--text3)">Join 500+ verified creators on Algeria's leading micro-influencer platform</p>
- </div>
-</section>
+<section style="background:var(--bg2)"><div class="w"><div class="cen">
+ <div class="stag" data-i="cr_tag">New Talent</div>
+ <h2 class="st" data-i="cr_title">Recently Joined Creators</h2>
+ <p class="sd" data-i="cr_desc">Discover our newest verified creators ready to collaborate on your next campaign.</p>
+</div>
+<div class="cgrid">
+ <div class="cc"><div class="cc-b">NEW</div><div class="cc-av">A</div><h4>Amina Beauty</h4><div class="cc-h">@amina.beautydz</div><div class="cc-sts"><div class="cc-s"><strong>14.2K</strong><span>Followers</span></div><div class="cc-s"><strong>8.3%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Beauty · Algiers</div><a class="cc-cta" onclick="go('creators')" data-i="cr_view">View Profile</a></div>
+ <div class="cc"><div class="cc-b">NEW</div><div class="cc-av">Y</div><h4>Youcef Cuisine</h4><div class="cc-h">@youcef.cuisine.dz</div><div class="cc-sts"><div class="cc-s"><strong>9.8K</strong><span>Followers</span></div><div class="cc-s"><strong>11.2%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Food · Oran</div><a class="cc-cta" onclick="go('creators')">View Profile</a></div>
+ <div class="cc"><div class="cc-b">NEW</div><div class="cc-av">L</div><h4>Lina Lifestyle</h4><div class="cc-h">@lina.lifestyle.dz</div><div class="cc-sts"><div class="cc-s"><strong>7.5K</strong><span>Followers</span></div><div class="cc-s"><strong>9.6%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Lifestyle · Sétif</div><a class="cc-cta" onclick="go('creators')">View Profile</a></div>
+ <div class="cc"><div class="cc-b">NEW</div><div class="cc-av">K</div><h4>Tech Karim</h4><div class="cc-h">@tech.karim.dz</div><div class="cc-sts"><div class="cc-s"><strong>11.1K</strong><span>Followers</span></div><div class="cc-s"><strong>6.4%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Tech · Annaba</div><a class="cc-cta" onclick="go('creators')">View Profile</a></div>
+</div>
+</div></section>
 
-<!-- PRICING -->
-<section id="pricing">
- <div class="wrap">
-  <div class="cen">
-   <div class="sec-tag">Pricing</div>
-   <h2 class="sec-title">Simple, Transparent Pricing</h2>
-   <p class="sec-desc">For companies & brands. Content creators join completely free.</p>
-  </div>
-  <div class="pr-grid">
-   <div class="pr-card"><div class="pr-name">Gratuit</div><div class="pr-price">0 <span>DZD</span></div><div class="pr-period">HT / Annual</div><ul class="pr-feats"><li>Access to creators' profiles</li><li>Platform tutorial</li><li>Access to campaign creation</li><li class="off">In-person training</li><li class="off">Campaign reporting</li><li class="off">Influencer support</li></ul><a href="create-campaign.html" class="pr-btn">Get Started</a></div>
-   <div class="pr-card"><div class="pr-name">Basic</div><div class="pr-price">5K <span>DZD</span></div><div class="pr-period">HT / Annual</div><ul class="pr-feats"><li>Access to creators' profiles</li><li>Platform tutorial</li><li>Campaign creation</li><li>Campaign case studies</li><li class="off">Pre-campaign statistics</li><li class="off">Campaign reporting</li></ul><a href="create-campaign.html" class="pr-btn">Get Started</a></div>
-   <div class="pr-card pop"><div class="pr-badge">Popular</div><div class="pr-name">VIP</div><div class="pr-price">50K <span>DZD</span></div><div class="pr-period">HT / Annual</div><ul class="pr-feats"><li>All Basic features</li><li>In-person training</li><li>Campaign on platform</li><li>Reminder emails to boost</li><li>Pre-campaign statistics</li><li>Campaign reporting</li></ul><a href="create-campaign.html" class="pr-btn">Get Started</a></div>
-   <div class="pr-card"><div class="pr-name">VIP+</div><div class="pr-price">150K <span>DZD</span></div><div class="pr-period">HT / Annual</div><ul class="pr-feats"><li>All VIP features</li><li>3× reminder emails</li><li>Support selecting influencers</li><li>Advanced statistics</li><li>Dedicated account manager</li><li>Priority support</li></ul><a href="create-campaign.html" class="pr-btn">Get Started</a></div>
-  </div>
-  <p class="pr-note">Free for Content Creators — No hidden fees.</p>
- </div>
-</section>
+<section id="pricing"><div class="w"><div class="cen">
+ <div class="stag" data-i="pr_tag">Pricing</div>
+ <h2 class="st" data-i="pr_title">Simple, Transparent Pricing</h2>
+ <p class="sd" data-i="pr_desc">For companies & brands. Content creators join completely free.</p>
+</div>
+<div class="pgrid">
+ <div class="pc"><div class="pcn">Gratuit</div><div class="pcpr">0 <span>DZD</span></div><div class="pcpd">HT / Annual</div><ul class="pfl"><li>Access to creators' profiles</li><li>Platform tutorial</li><li>Campaign creation access</li><li class="off">In-person training</li><li class="off">Campaign reporting</li></ul><a class="pcbt" onclick="go('campaign')">Get Started</a></div>
+ <div class="pc"><div class="pcn">Basic</div><div class="pcpr">5K <span>DZD</span></div><div class="pcpd">HT / Annual</div><ul class="pfl"><li>All Gratuit features</li><li>Campaign case studies</li><li>Platform tutorial</li><li class="off">Pre-campaign stats</li><li class="off">Campaign reporting</li></ul><a class="pcbt" onclick="go('campaign')">Get Started</a></div>
+ <div class="pc pop"><div class="pcbd">Popular</div><div class="pcn">VIP</div><div class="pcpr">50K <span>DZD</span></div><div class="pcpd">HT / Annual</div><ul class="pfl"><li>All Basic features</li><li>In-person training</li><li>Campaign on platform</li><li>Reminder emails</li><li>Pre-campaign stats</li><li>Campaign reporting</li></ul><a class="pcbt" onclick="go('campaign')">Get Started</a></div>
+ <div class="pc"><div class="pcn">VIP+</div><div class="pcpr">150K <span>DZD</span></div><div class="pcpd">HT / Annual</div><ul class="pfl"><li>All VIP features</li><li>3× reminder emails</li><li>Influencer selection help</li><li>Advanced statistics</li><li>Dedicated manager</li><li>Priority support</li></ul><a class="pcbt" onclick="go('campaign')">Get Started</a></div>
+</div>
+</div></section>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
- <div class="wrap">
-  <div class="cen">
-   <div class="sec-tag">How It Works</div>
-   <h2 class="sec-title">Simple & Effective</h2>
-  </div>
-  <div class="how-tabs">
-   <button class="how-tab on" onclick="howTab(this,0)">Content Creators</button>
-   <button class="how-tab" onclick="howTab(this,1)">Companies</button>
-  </div>
-  <div class="how-steps" id="howSteps">
-   <div class="how-step"><div class="how-num">01</div><h4>Create Account</h4><p>Sign up quickly with your email or social login.</p></div>
-   <div class="how-step"><div class="how-num">02</div><h4>Add Personal Info</h4><p>Complete your profile with interests, social links and skills.</p></div>
-   <div class="how-step"><div class="how-num">03</div><h4>Browse Campaigns</h4><p>Explore campaigns that fit your niche and audience.</p></div>
-   <div class="how-step"><div class="how-num">04</div><h4>Apply & Get Paid</h4><p>Submit applications, create content, and receive payment.</p></div>
-  </div>
- </div>
-</section>
+<section class="how"><div class="w"><div class="cen">
+ <div class="stag" data-i="how_tag">How It Works</div>
+ <h2 class="st" data-i="how_title">Simple & Effective</h2>
+</div>
+<div class="htabs"><button class="htab on" onclick="ht(this,0)" data-i="how_tab1">Creators</button><button class="htab" onclick="ht(this,1)" data-i="how_tab2">Companies</button></div>
+<div class="hsteps" id="hS">
+ <div class="hstp"><div class="hnum">01</div><h4>Create Account</h4><p>Sign up quickly with email or social login.</p></div>
+ <div class="hstp"><div class="hnum">02</div><h4>Complete Profile</h4><p>Add interests, social links, and skills.</p></div>
+ <div class="hstp"><div class="hnum">03</div><h4>Browse Campaigns</h4><p>Explore campaigns that fit your niche.</p></div>
+ <div class="hstp"><div class="hnum">04</div><h4>Apply & Earn</h4><p>Create content and get paid.</p></div>
+</div>
+</div></section>
 
-<!-- FEATURES -->
-<section>
- <div class="wrap">
-  <div class="cen">
-   <div class="sec-tag">Discover</div>
-   <h2 class="sec-title">Why Use Influzy</h2>
-   <p class="sec-desc">Join brands and creators who trust Influzy for authentic influencer marketing.</p>
-  </div>
-  <div class="feat-grid">
-   <div class="feat"><div class="feat-icon">◎</div><h4>Smart Discovery</h4><p>Find the perfect influencers with advanced filtering. Search by niche, demographics, engagement.</p><div class="feat-tag">500+ Active Creators</div></div>
-   <div class="feat"><div class="feat-icon">✓</div><h4>Verified Quality</h4><p>Every creator is manually verified for authenticity. Real followers, genuine engagement.</p><div class="feat-tag">98% Authentic Profiles</div></div>
-   <div class="feat"><div class="feat-icon">◆</div><h4>Real-Time Analytics</h4><p>Track campaign performance with detailed analytics. Monitor reach, engagement, conversions.</p><div class="feat-tag">300M+ Views Generated</div></div>
-   <div class="feat"><div class="feat-icon">⬡</div><h4>Secure Payments</h4><p>Protected payment system. CCP, BaridiMob, bank transfer. Payments released after approval.</p><div class="feat-tag">100% Secure</div></div>
-   <div class="feat"><div class="feat-icon">☆</div><h4>24/7 Support</h4><p>Dedicated support team from strategy planning to campaign execution. Always available.</p><div class="feat-tag">Expert Consultation</div></div>
-   <div class="feat"><div class="feat-icon">⚑</div><h4>Local Expertise</h4><p>Deep understanding of the Algerian market with influencers across all 48 wilayas.</p><div class="feat-tag">Algeria's #1 Platform</div></div>
-  </div>
- </div>
-</section>
+<section><div class="w"><div class="cen">
+ <div class="stag" data-i="ft_tag">Discover</div>
+ <h2 class="st" data-i="ft_title">Why Use Influzy</h2>
+</div>
+<div class="fgrid">
+ <div class="ft"><div class="ftic">◎</div><h4 data-i="f1_t">Smart Discovery</h4><p data-i="f1_d">Find influencers with advanced filtering by niche, demographics, engagement.</p><div class="fttg">500+ Creators</div></div>
+ <div class="ft"><div class="ftic">✓</div><h4 data-i="f2_t">Verified Quality</h4><p data-i="f2_d">Every creator is manually verified. Real followers, genuine engagement.</p><div class="fttg">98% Authentic</div></div>
+ <div class="ft"><div class="ftic">◆</div><h4 data-i="f3_t">Real-Time Analytics</h4><p data-i="f3_d">Track performance with detailed analytics. Monitor reach, engagement, ROI.</p><div class="fttg">Data-Driven</div></div>
+ <div class="ft"><div class="ftic">⬡</div><h4 data-i="f4_t">Secure Payments</h4><p data-i="f4_d">CCP, BaridiMob, bank transfer. Payments released after content approval.</p><div class="fttg">100% Secure</div></div>
+ <div class="ft"><div class="ftic">☆</div><h4 data-i="f5_t">24/7 Support</h4><p data-i="f5_d">Dedicated team from strategy planning to campaign execution.</p><div class="fttg">Always On</div></div>
+ <div class="ft"><div class="ftic">⚑</div><h4 data-i="f6_t">Local Expertise</h4><p data-i="f6_d">Deep understanding of the Algerian market across all 48 wilayas.</p><div class="fttg">#1 in Algeria</div></div>
+</div>
+</div></section>
 
-<!-- CTA -->
-<section class="cta-sec">
- <div class="wrap">
-  <h2>Ready to amplify your <span class="hl">brand</span>?</h2>
-  <p>Join the leading micro-influencer platform in Algeria and start creating impactful campaigns today.</p>
-  <div class="h-btns">
-   <a href="create-campaign.html" class="btn-m">Start Your Campaign →</a>
-   <a href="page/about.html" class="btn-g">Learn More</a>
-  </div>
+<section class="cta"><div class="w">
+ <h2 data-i="cta_title">Ready to amplify your <span class="hl">brand</span>?</h2>
+ <p data-i="cta_desc">Join the leading micro-influencer platform in Algeria.</p>
+ <div class="hbtns"><a class="bm" onclick="go('campaign')" data-i="cta_btn1">Start Campaign →</a><a class="bg" onclick="go('about')" data-i="cta_btn2">Learn More</a></div>
+</div></section>
+</div>
+
+<!-- ========== ABOUT ========== -->
+<div class="page" id="p-about">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>About</span></div><h1>Who is <span class="hl">Influzy</span>?</h1><p data-i="ab_sub">Algeria's first self-service micro-influence platform.</p></div></section>
+<section><div class="w"><div class="abg"><div class="abt"><div class="stag">Our Story</div><h2 data-i="ab_h2">Born from frustration, built with passion</h2><p data-i="ab_p1">In Algeria, thousands of micro-creators produce authentic content every day. Yet brands keep spending fortunes on ads that don't convert.</p><p data-i="ab_p2">Influzy connects brands with the right creators — with transparency, simplicity, and measurable results.</p></div><div class="abx"><div class="abx-big">500+</div><div class="abx-lbl" data-i="ab_lbl">Verified creators across 48 wilayas</div></div></div></div></section>
+<section style="background:var(--bg2)"><div class="w"><div class="cen"><div class="stag" data-i="val_tag">Values</div><h2 class="st" data-i="val_title">What Guides Us</h2></div>
+<div class="vg">
+ <div class="vc"><div class="vci">◎</div><h3 data-i="v1_t">Transparency</h3><p data-i="v1_d">No fake followers. Every profile is audited.</p></div>
+ <div class="vc"><div class="vci">★</div><h3 data-i="v2_t">Authenticity</h3><p data-i="v2_d">Engagement over reach. Quality over quantity.</p></div>
+ <div class="vc"><div class="vci">⚡</div><h3 data-i="v3_t">Simplicity</h3><p data-i="v3_d">Explore, select, launch. Fast and smooth.</p></div>
+</div></div></section>
+<section class="cta"><div class="w"><h2>Join <span class="hl">Influzy</span></h2><p data-i="ab_cta">Whether you're a brand or a creator.</p><div class="hbtns"><a class="bm" onclick="go('contact')" data-i="ab_ctabtn">Contact Us →</a></div></div></section>
+</div>
+
+<!-- ========== CREATORS ========== -->
+<div class="page" id="p-creators">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Creators</span></div><h1>Browse <span class="hl">Creators</span></h1><p data-i="crs_sub">Find the perfect micro-influencers. Every profile is verified.</p></div></section>
+<section style="background:var(--bg2)"><div class="w">
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:32px">
+ <button class="cfb on" onclick="fil(this,'all')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">All</button>
+ <button class="cfb" onclick="fil(this,'beauty')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Beauty</button>
+ <button class="cfb" onclick="fil(this,'food')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Food</button>
+ <button class="cfb" onclick="fil(this,'lifestyle')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Lifestyle</button>
+ <button class="cfb" onclick="fil(this,'tech')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Tech</button>
+ <button class="cfb" onclick="fil(this,'fitness')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Fitness</button>
+ <button class="cfb" onclick="fil(this,'comedy')" style="padding:7px 16px;border:1px solid var(--border);border-radius:7px;background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:var(--tr)">Comedy</button>
+</div>
+<div class="cgrid">
+ <div class="cc" data-c="beauty"><div class="cc-b">NEW</div><div class="cc-av">A</div><h4>Amina Beauty</h4><div class="cc-h">@amina.beautydz</div><div class="cc-sts"><div class="cc-s"><strong>14.2K</strong><span>Followers</span></div><div class="cc-s"><strong>8.3%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Beauty · Algiers</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="food"><div class="cc-b">NEW</div><div class="cc-av">Y</div><h4>Youcef Cuisine</h4><div class="cc-h">@youcef.cuisine.dz</div><div class="cc-sts"><div class="cc-s"><strong>9.8K</strong><span>Followers</span></div><div class="cc-s"><strong>11.2%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Food · Oran</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="lifestyle"><div class="cc-av">L</div><h4>Lina Lifestyle</h4><div class="cc-h">@lina.lifestyle.dz</div><div class="cc-sts"><div class="cc-s"><strong>7.5K</strong><span>Followers</span></div><div class="cc-s"><strong>9.6%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Lifestyle · Sétif</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="tech"><div class="cc-av">K</div><h4>Tech Karim</h4><div class="cc-h">@tech.karim.dz</div><div class="cc-sts"><div class="cc-s"><strong>11.1K</strong><span>Followers</span></div><div class="cc-s"><strong>6.4%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Tech · Annaba</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="fitness"><div class="cc-av">F</div><h4>FitDZ Coach</h4><div class="cc-h">@fitdz.coach</div><div class="cc-sts"><div class="cc-s"><strong>8.7K</strong><span>Followers</span></div><div class="cc-s"><strong>12.1%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Fitness · Blida</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="beauty"><div class="cc-av">N</div><h4>Nour Skincare</h4><div class="cc-h">@nour.skincare.dz</div><div class="cc-sts"><div class="cc-s"><strong>5.3K</strong><span>Followers</span></div><div class="cc-s"><strong>14.7%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Beauty · Tlemcen</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="comedy"><div class="cc-av">M</div><h4>MouhDZ</h4><div class="cc-h">@mouh.comedy.dz</div><div class="cc-sts"><div class="cc-s"><strong>18.5K</strong><span>Followers</span></div><div class="cc-s"><strong>15.3%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Comedy · Constantine</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+ <div class="cc" data-c="lifestyle"><div class="cc-av">S</div><h4>SarahExplore</h4><div class="cc-h">@sarah.explore.dz</div><div class="cc-sts"><div class="cc-s"><strong>6.2K</strong><span>Followers</span></div><div class="cc-s"><strong>10.8%</strong><span>Engage.</span></div></div><div class="cc-v">Verified</div><div class="cc-n">Travel · Béjaïa</div><a class="cc-cta" onclick="openM('b')">Collaborate</a></div>
+</div>
+<div style="text-align:center;margin-top:36px"><p style="font-size:13px;color:var(--text2);margin-bottom:16px" data-i="crs_join">Want to become a verified creator?</p><a class="bm" onclick="go('join')" data-i="crs_joinbtn">Join as Creator →</a></div>
+</div></section>
+</div>
+
+<!-- ========== BLOG ========== -->
+<div class="page" id="p-blog">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Blog</span></div><h1>The <span class="hl">Influzy</span> Blog</h1><p data-i="bl_sub">Tips, case studies & influencer marketing news.</p></div></section>
+<section><div class="w"><div class="blg">
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(59,130,246,.06),rgba(255,107,44,.06))">✎</div><div class="blbd"><div class="bltg">Guide</div><h3>Micro vs Macro: Why Small Beats Big</h3><p>5x more engagement with micro-influencers.</p><div class="blm"><span>15 Jul 2025</span><span>5 min</span></div></div></div>
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(34,197,94,.06),rgba(0,188,212,.06))">★</div><div class="blbd"><div class="bltg">Case Study</div><h3>Restaurant Doubles Clients with 5 Creators</h3><p>340% ROI in one campaign.</p><div class="blm"><span>10 Jul 2025</span><span>8 min</span></div></div></div>
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(168,85,247,.06),rgba(233,30,99,.06))">⚡</div><div class="blbd"><div class="bltg">Trends</div><h3>TikTok Algeria: 2025 Numbers</h3><p>New formats and SME opportunities.</p><div class="blm"><span>5 Jul 2025</span><span>6 min</span></div></div></div>
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(255,152,0,.06),rgba(244,67,54,.06))">◎</div><div class="blbd"><div class="bltg">Guide</div><h3>How to Write an Influencer Brief</h3><p>5-step method + free template.</p><div class="blm"><span>28 Jun 2025</span><span>4 min</span></div></div></div>
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(0,188,212,.06),rgba(59,130,246,.06))">⬡</div><div class="blbd"><div class="bltg">Tips</div><h3>5 Mistakes Brands Make</h3><p>Avoid these influencer marketing pitfalls.</p><div class="blm"><span>20 Jun 2025</span><span>7 min</span></div></div></div>
+ <div class="blc"><div class="blth" style="background:linear-gradient(135deg,rgba(233,30,99,.06),rgba(168,85,247,.06))">♥</div><div class="blbd"><div class="bltg">Creators</div><h3>Become a Micro-Influencer: 2025</h3><p>From niche to monetization.</p><div class="blm"><span>12 Jun 2025</span><span>10 min</span></div></div></div>
+</div></div></section>
+</div>
+
+<!-- ========== FAQ ========== -->
+<div class="page" id="p-faq">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>FAQ</span></div><h1>Frequently Asked <span class="hl">Questions</span></h1><p data-i="fq_sub">Everything you need to know about Influzy.</p></div></section>
+<section><div class="w">
+<div class="cen"><div class="stag">For Brands</div><h2 class="st">Brand Questions</h2></div>
+<div class="fql">
+ <div class="fqi"><div class="fqq"><span>What is a micro-influencer?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">A content creator with 1K–50K followers. Their engagement rate is often 3–5x higher than macro-influencers.</div></div></div>
+ <div class="fqi"><div class="fqq"><span>How much does it cost?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">Plans start free (Gratuit). Basic at 5K DZD/year, VIP at 50K DZD/year, VIP+ at 150K DZD/year.</div></div></div>
+ <div class="fqi"><div class="fqq"><span>How are creators verified?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">We audit every profile: follower authenticity, real engagement rate, content quality, and audience consistency.</div></div></div>
+ <div class="fqi"><div class="fqq"><span>How do I pay?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">Bank transfer, CCP, BaridiMob, or cash (Algiers). Payment after brief approval.</div></div></div>
+</div>
+<div style="margin-top:48px"><div class="cen"><div class="stag" style="color:var(--green);border-color:rgba(34,197,94,.2)">For Creators</div><h2 class="st">Creator Questions</h2></div>
+<div class="fql">
+ <div class="fqi"><div class="fqq"><span>Is it free to join?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">Yes, 100% free. No hidden fees, ever.</div></div></div>
+ <div class="fqi"><div class="fqq"><span>Minimum followers?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">From 1,000 with good engagement. Quality over quantity.</div></div></div>
+ <div class="fqi"><div class="fqq"><span>How do I get paid?</span><span class="fqic">+</span></div><div class="fqa"><div class="fqa-in">Within 7 days after publishing. Via CCP, BaridiMob, or bank transfer.</div></div></div>
+</div></div>
+</div></section>
+<section class="cta"><div class="w"><h2>Still have questions?</h2><p>Our team is ready to help.</p><div class="hbtns"><a class="bm" onclick="go('contact')">Contact Us →</a></div></div></section>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<div class="page" id="p-contact">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Contact</span></div><h1>Let's talk about your <span class="hl">project</span></h1><p data-i="ct_sub">A question, a quote, a partnership? We're one message away.</p></div></section>
+<section><div class="w"><div class="ctg">
+ <div class="ctcs">
+  <div class="ctc"><div class="ctci">✉</div><div><h4>Email</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0764686973666473476e69616b727d7e29637d">[email&#160;protected]</a></p></div></div>
+  <div class="ctc"><div class="ctci">☎</div><div><h4>Phone</h4><p>+213 XXX XX XX XX</p></div></div>
+  <div class="ctc"><div class="ctci">◉</div><div><h4>Location</h4><p>Algiers, Algeria</p></div></div>
+  <div class="ctc"><div class="ctci" style="color:#25D366">W</div><div><h4>WhatsApp</h4><p>Reply within 2h</p></div></div>
  </div>
-</section>
+ <div class="ctf"><h3 data-i="ct_form">Send us a message</h3>
+  <div class="fd"><label>Full Name</label><input required type="text" placeholder="Karim Benali"></div>
+  <div class="fd"><label>Email</label><input required type="email" placeholder="karim@email.com"></div>
+  <div class="fd"><label>Subject</label><select required><option value="">—</option><option>I'm a brand</option><option>I'm a creator</option><option>Partnership</option><option>Other</option></select></div>
+  <div class="fd"><label>Message</label><textarea required placeholder="Describe your request..."></textarea></div>
+  <button class="fsb" onclick="subF(this)">Send Message</button>
+ </div>
+</div></div></section>
+</div>
+
+<!-- ========== CAMPAIGN ========== -->
+<div class="page" id="p-campaign">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Create Campaign</span></div><h1>Launch Your <span class="hl">Campaign</span></h1><p>4 simple steps to create your influencer marketing campaign.</p></div></section>
+<section><div class="w"><div class="stepper">
+ <div class="sbar"><div class="sdot on" onclick="stepTo(1)">1</div><div class="sline"></div><div class="sdot" onclick="stepTo(2)">2</div><div class="sline"></div><div class="sdot" onclick="stepTo(3)">3</div><div class="sline"></div><div class="sdot" onclick="stepTo(4)">4</div></div>
+ <div class="spnl on" id="s1"><h3>Step 1 — Your Company</h3><p class="ssub">Tell us about your brand.</p><div class="fdr"><div class="fd"><label>Company Name</label><input required placeholder="DZ Cosmetics"></div><div class="fd"><label>Your Name</label><input required placeholder="Karim Benali"></div></div><div class="fdr"><div class="fd"><label>Email</label><input required type="email" placeholder="contact@brand.dz"></div><div class="fd"><label>Phone</label><input required type="tel" placeholder="0555 XX XX XX"></div></div><div class="fd"><label>Industry</label><select required><option value="">Select</option><option>Beauty</option><option>Food</option><option>Fashion</option><option>Tech</option><option>Services</option><option>E-commerce</option><option>Other</option></select></div><div class="snav"><div></div><a class="bm" onclick="stepTo(2)">Next →</a></div></div>
+ <div class="spnl" id="s2"><h3>Step 2 — Campaign Details</h3><p class="ssub">Define what you want to promote.</p><div class="fd"><label>Campaign Name</label><input required placeholder="Summer Collection Launch"></div><div class="fd"><label>Description</label><textarea required placeholder="Describe the product or service..."></textarea></div><div class="fdr"><div class="fd"><label>Goal</label><select required><option value="">Select</option><option>Brand Awareness</option><option>Drive Sales</option><option>Store Visits</option><option>Product Launch</option><option>UGC</option></select></div><div class="fd"><label>Target</label><select required><option value="">Select</option><option>Women 18-25</option><option>Women 25-35</option><option>Men 18-35</option><option>Mixed</option><option>All ages</option></select></div></div><div class="fdr"><div class="fd"><label>Platform</label><select required><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Both</option><option>All</option></select></div><div class="fd"><label>Format</label><select required><option value="">Select</option><option>Stories</option><option>Reels</option><option>Posts</option><option>TikTok Videos</option><option>Mixed</option><option>UGC</option></select></div></div><div class="snav"><a class="bg" onclick="stepTo(1)">← Back</a><a class="bm" onclick="stepTo(3)">Next →</a></div></div>
+ <div class="spnl" id="s3"><h3>Step 3 — Budget & Timeline</h3><p class="ssub">Set your budget and dates.</p><div class="fd"><label>Pack</label><select required><option value="">Select</option><option>Gratuit (0 DZD)</option><option>Basic (5K DZD/yr)</option><option>VIP (50K DZD/yr)</option><option>VIP+ (150K DZD/yr)</option><option>Custom</option></select></div><div class="fdr"><div class="fd"><label>Start Date</label><input required type="date"></div><div class="fd"><label>Duration</label><select required><option value="">Select</option><option>1 week</option><option>2 weeks</option><option>1 month</option><option>3 months</option></select></div></div><div class="fd"><label>How Many Creators</label><select required><option value="">Select</option><option>1-3</option><option>4-7</option><option>8-15</option><option>15+</option><option>Help me decide</option></select></div><div class="snav"><a class="bg" onclick="stepTo(2)">← Back</a><a class="bm" onclick="stepTo(4)">Next →</a></div></div>
+ <div class="spnl" id="s4"><h3>Step 4 — Review & Submit</h3><p class="ssub">Almost done!</p><div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px"><p style="font-size:12px;color:var(--text2);line-height:1.8"><strong style="color:var(--text)">After submission:</strong><br>1. We review within 24h<br>2. Send matching creators<br>3. Schedule strategy call<br>4. Launch your campaign</p></div><div class="fd"><label>Additional Notes</label><textarea placeholder="Brand guidelines, dos & don'ts..."></textarea></div><div class="snav"><a class="bg" onclick="stepTo(3)">← Back</a><a class="bm" onclick="subF(this)" style="background:var(--green)">Submit Campaign ✓</a></div></div>
+</div></div></section>
+</div>
+
+<!-- ========== JOIN ========== -->
+<div class="page" id="p-join">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Join</span></div><h1>Become an <span class="hl">Influzy</span> Creator</h1><p data-i="jn_sub">Join 500+ verified creators and get paid collaborations.</p></div></section>
+<section><div class="w">
+<div class="cen"><div class="stag">Why Join?</div><h2 class="st">What You Get</h2></div>
+<div class="jfg">
+ <div class="jf"><div class="jfi">💰</div><h4>Get Paid</h4><p>Receive paid brand collaborations.</p></div>
+ <div class="jf"><div class="jfi">📈</div><h4>Grow</h4><p>Boost credibility and audience.</p></div>
+ <div class="jf"><div class="jfi">🤝</div><h4>Free Forever</h4><p>100% free, no hidden fees.</p></div>
+ <div class="jf"><div class="jfi">✓</div><h4>Verified Badge</h4><p>Prove you're trusted.</p></div>
+ <div class="jf"><div class="jfi">🎯</div><h4>Auto-Matching</h4><p>Campaigns come to you.</p></div>
+ <div class="jf"><div class="jfi">⚡</div><h4>Fast Payment</h4><p>Paid within 7 days.</p></div>
+</div>
+<div class="jform"><h3>Creator Registration</h3><p class="msub">We'll review your profile within 48h.</p>
+ <div class="fdr"><div class="fd"><label>Full Name</label><input required placeholder="Amina Boudiaf"></div><div class="fd"><label>Username</label><input required placeholder="@amina.beautydz"></div></div>
+ <div class="fdr"><div class="fd"><label>Email</label><input required type="email" placeholder="amina@gmail.com"></div><div class="fd"><label>Phone</label><input required type="tel" placeholder="0555 XX XX XX"></div></div>
+ <div class="fdr"><div class="fd"><label>Platform</label><select required><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>YouTube</option><option>Multiple</option></select></div><div class="fd"><label>Followers</label><select required><option value="">Select</option><option>1K–5K</option><option>5K–10K</option><option>10K–25K</option><option>25K–50K</option><option>50K+</option></select></div></div>
+ <div class="fdr"><div class="fd"><label>Niche</label><select required><option value="">Select</option><option>Beauty</option><option>Food</option><option>Lifestyle</option><option>Tech</option><option>Fitness</option><option>Comedy</option><option>Travel</option><option>Other</option></select></div><div class="fd"><label>Wilaya</label><input required placeholder="Algiers, Oran..."></div></div>
+ <div class="fd"><label>Best Content Link (optional)</label><input placeholder="Link to your best reel or video"></div>
+ <button class="fsb" onclick="subF(this)" style="background:var(--green)">Submit Application ✓</button>
+ <p style="text-align:center;margin-top:14px;font-size:11px;color:var(--text3)">100% free · No hidden fees · Review within 48h</p>
+</div>
+</div></section>
+</div>
+
+<!-- ========== DASHBOARD ========== -->
+<div class="page" id="p-dashboard">
+<section class="ih"><div class="w"><div class="bc"><a onclick="go('home')">Home</a><span>/</span><span>Dashboard</span></div><h1>Campaign <span class="hl">Dashboard</span></h1><p>Monitor performance and manage creators.</p></div></section>
+<section><div class="w">
+ <div class="dstats"><div class="ds"><h4><b>3</b></h4><p>Active Campaigns</p></div><div class="ds"><h4><b>12</b></h4><p>Creators Engaged</p></div><div class="ds"><h4><b>47.2K</b></h4><p>Total Reach</p></div><div class="ds"><h4><b>8.6%</b></h4><p>Avg. Engagement</p></div></div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-top:32px;flex-wrap:wrap;gap:10px"><h3 style="font-size:18px;font-weight:800">My Campaigns</h3><a class="bm btn-sm" onclick="go('campaign')">+ New Campaign</a></div>
+ <div style="overflow-x:auto"><table class="dtbl">
+  <thead><tr><th>Campaign</th><th>Status</th><th>Creators</th><th>Reach</th><th>Engagement</th><th>Date</th></tr></thead>
+  <tbody>
+   <tr><td><strong style="color:var(--text)">Summer Menu</strong><br><span style="font-size:10px;color:var(--text3)">Dar El Kouzina</span></td><td><span class="sts sts-a">Active</span></td><td>7</td><td>23.4K</td><td>9.2%</td><td>Jul 10</td></tr>
+   <tr><td><strong style="color:var(--text)">Skincare Line</strong><br><span style="font-size:10px;color:var(--text3)">DZ Cosmetics</span></td><td><span class="sts sts-p">Pending</span></td><td>5</td><td>—</td><td>—</td><td>Jul 14</td></tr>
+   <tr><td><strong style="color:var(--text)">Ramadan Promo</strong><br><span style="font-size:10px;color:var(--text3)">Caprice</span></td><td><span class="sts sts-d">Done</span></td><td>15</td><td>98.7K</td><td>11.4%</td><td>Mar 1</td></tr>
+  </tbody>
+ </table></div>
+</div></section>
+</div>
 
 <!-- FOOTER -->
-<footer>
- <div class="wrap">
-  <div class="f-grid">
-   <div class="f-brand"><a href="index.html" class="logo">influ<b>zy</b></a><p>Algeria's first micro-influencer platform. Connecting brands with authentic creators for high-impact campaigns.</p></div>
-   <div><h5>Platform</h5><ul><li><a href="index.html">Home</a></li><li><a href="page/about.html">About</a></li><li><a href="page/blog.html">Blog</a></li><li><a href="page/faq.html">FAQ</a></li></ul></div>
-   <div><h5>Services</h5><ul><li><a href="page/creators.html">Creators</a></li><li><a href="create-campaign.html">Campaign</a></li><li><a href="page/dashboard.html">Dashboard</a></li></ul></div>
-   <div><h5>Contact</h5><ul><li><a href="mailto:contact@influzy.dz">contact@influzy.dz</a></li><li><a href="page/contact.html">Contact Form</a></li><li><a href="join.html">Join as Creator</a></li></ul></div>
-  </div>
-  <div class="f-bot"><span>© 2025 Influzy. All rights reserved.</span><div style="display:flex;gap:16px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+<footer><div class="w">
+ <div class="fg">
+  <div class="fb"><span class="logo" onclick="go('home')">influ<b>zy</b></span><p>Algeria's first micro-influencer platform. Connecting brands with authentic creators.</p></div>
+  <div><h5>Platform</h5><ul><li><a onclick="go('home')">Home</a></li><li><a onclick="go('about')">About</a></li><li><a onclick="go('blog')">Blog</a></li><li><a onclick="go('faq')">FAQ</a></li></ul></div>
+  <div><h5>Services</h5><ul><li><a onclick="go('creators')">Creators</a></li><li><a onclick="go('campaign')">Campaign</a></li><li><a onclick="go('dashboard')">Dashboard</a></li></ul></div>
+  <div><h5>Contact</h5><ul><li><a href="/cdn-cgi/l/email-protection#3a5955544e5b594e7a53545c564f4043145e40"><span class="__cf_email__" data-cfemail="34575b5a40555740745d5a5258414e4d1a504e">[email&#160;protected]</span></a></li><li><a onclick="go('contact')">Contact Form</a></li><li><a onclick="go('join')">Join as Creator</a></li></ul></div>
  </div>
-</footer>
+ <div class="fbt"><span>© 2025 Influzy. All rights reserved.</span><div style="display:flex;gap:14px"><a>Privacy</a><a>Terms</a></div></div>
+</div></footer>
 
-<script src="app.js"></script>
+<!-- MODAL -->
+<div class="mob" id="mB"><div class="mbox">
+ <button class="mx" onclick="closeM()">✕</button>
+ <h2>Quick Campaign Request</h2><p class="msub">We'll contact you within 24h.</p>
+ <div class="fd"><label>Brand</label><input required placeholder="DZ Cosmetics"></div>
+ <div class="fd"><label>Email</label><input required type="email" placeholder="contact@brand.dz"></div>
+ <div class="fd"><label>Phone</label><input required type="tel" placeholder="0555 XX XX XX"></div>
+ <div class="fd"><label>What do you want to promote?</label><textarea required placeholder="Describe your campaign..."></textarea></div>
+ <button class="fsb" onclick="subF(this)">Send Request</button>
+</div></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// THEME
+function togT(){const d=document.documentElement,isL=d.getAttribute('data-t')==='l';if(isL){d.removeAttribute('data-t');document.getElementById('tBtn').textContent='☀'}else{d.setAttribute('data-t','l');document.getElementById('tBtn').textContent='☾'}try{localStorage.setItem('iz',isL?'d':'l')}catch(e){}}
+try{if(localStorage.getItem('iz')==='l'){document.documentElement.setAttribute('data-t','l');document.addEventListener('DOMContentLoaded',()=>{document.getElementById('tBtn').textContent='☾'})}}catch(e){}
+
+// NAV
+window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(n)n.classList.toggle('s',scrollY>50)});
+
+// PAGES
+function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));const e=document.getElementById('p-'+p);if(e)e.classList.add('on');window.scrollTo({top:0,behavior:'smooth'});document.getElementById('nm')?.classList.remove('open')}
+
+// MODAL
+function openM(){document.getElementById('mB').classList.add('open');document.body.style.overflow='hidden'}
+function closeM(){document.getElementById('mB').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('click',e=>{if(e.target.classList.contains('mob')){e.target.classList.remove('open');document.body.style.overflow=''}});
+
+// FILTER
+function fil(b,c){document.querySelectorAll('.cfb').forEach(x=>{x.classList.remove('on');x.style.borderColor='';x.style.color=''});b.classList.add('on');b.style.borderColor='var(--accent)';b.style.color='var(--accent)';document.querySelectorAll('.cc[data-c]').forEach(x=>{x.style.display=c==='all'||x.dataset.c===c?'':'none'})}
+
+// COUNTER
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,t=+el.dataset.v;let c=0;const s=Math.ceil(t/50);const tm=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(tm)}el.textContent=c},25);io.unobserve(el)}})},{threshold:.5});document.querySelectorAll('.ctr').forEach(c=>io.observe(c))}
+
+// HOW TABS
+const hd=[[{t:'Create Account',d:'Sign up with email or social login.'},{t:'Complete Profile',d:'Add interests, social links, skills.'},{t:'Browse Campaigns',d:'Explore campaigns in your niche.'},{t:'Apply & Earn',d:'Create content and get paid.'}],[{t:'Register',d:'Create your company profile.'},{t:'Add Details',d:'Business info and goals.'},{t:'Create Campaign',d:'Launch your marketing campaign.'},{t:'Choose Creators',d:'Select and collaborate.'}]];
+function ht(b,i){document.querySelectorAll('.htab').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('hS').innerHTML=hd[i].map((s,j)=>`<div class="hstp"><div class="hnum">0${j+1}</div><h4>${s.t}</h4><p>${s.d}</p></div>`).join('')}
+
+// FAQ
+document.addEventListener('click',e=>{const q=e.target.closest('.fqq');if(!q)return;const i=q.parentElement,a=i.querySelector('.fqa'),n=a.querySelector('.fqa-in'),o=i.classList.contains('open');document.querySelectorAll('.fqi.open').forEach(x=>{x.classList.remove('open');x.querySelector('.fqa').style.maxHeight='0'});if(!o){i.classList.add('open');a.style.maxHeight=n.scrollHeight+'px'}});
+
+// STEPPER
+let cs=1;
+function stepTo(n){if(n<1||n>4)return;cs=n;document.querySelectorAll('.sdot').forEach((d,i)=>{d.classList.remove('on','done');if(i+1<n)d.classList.add('done');if(i+1===n)d.classList.add('on')});document.querySelectorAll('.sline').forEach((l,i)=>{l.classList.toggle('done',i+1<n)});document.querySelectorAll('.spnl').forEach(p=>p.classList.remove('on'));const t=document.getElementById('s'+n);if(t)t.classList.add('on')}
+
+// FORM
+function subF(b){const box=b.closest('.mbox')||b.closest('.ctf')||b.closest('.jform')||b.closest('.spnl');if(!box)return;const fs=box.querySelectorAll('input[required],select[required],textarea[required]');let ok=true;fs.forEach(f=>{if(!f.value){f.style.borderColor='var(--red)';ok=false}else f.style.borderColor=''});if(ok){alert('Thank you! Your request has been sent. We\'ll get back to you within 24h.');const m=box.closest('.mob');if(m){m.classList.remove('open');document.body.style.overflow=''}fs.forEach(f=>f.value='')}}
+
+// LANGUAGE
+const L={
+en:{nav_about:'About',nav_creators:'Creators',nav_blog:'Blog',nav_faq:'FAQ',nav_contact:'Contact',nav_cta:'Get Started →',hero_badge:"ALGERIA'S FIRST PLATFORM",hero_title:'CONNECTING <span class="hl">BRANDS</span> WITH <span class="hl">MICRO-INFLUENCERS</span> IN ALGERIA.',hero_sub:'The first self-service platform to find, connect and launch campaigns with verified Algerian content creators.',hero_cta1:'Start a Campaign →',hero_cta2:'Join as Creator',stat_creators:'Active Creators',stat_wilayas:'Wilayas Covered',stat_satis:'Satisfaction',mq_label:'Trusted By',cr_tag:'New Talent',cr_title:'Recently Joined Creators',cr_desc:'Discover our newest verified creators ready to collaborate.',cr_view:'View Profile',pr_tag:'Pricing',pr_title:'Simple, Transparent Pricing',pr_desc:'For companies & brands. Creators join free.',how_tag:'How It Works',how_title:'Simple & Effective',how_tab1:'Creators',how_tab2:'Companies',ft_tag:'Discover',ft_title:'Why Use Influzy',f1_t:'Smart Discovery',f1_d:'Find influencers with advanced filtering.',f2_t:'Verified Quality',f2_d:'Every creator is manually verified.',f3_t:'Real-Time Analytics',f3_d:'Track performance with detailed analytics.',f4_t:'Secure Payments',f4_d:'CCP, BaridiMob, bank transfer.',f5_t:'24/7 Support',f5_d:'Dedicated team for your campaigns.',f6_t:'Local Expertise',f6_d:'Deep understanding of the Algerian market.',cta_title:'Ready to amplify your <span class="hl">brand</span>?',cta_desc:'Join the leading micro-influencer platform in Algeria.',cta_btn1:'Start Campaign →',cta_btn2:'Learn More',fl_campaign:'Campaign Approved',fl_2min:'2 min ago',fl_paid:'Payment sent',fl_match:'New creator match',fl_score:'Score: 94%',fl_engage:'+2,847 engagements',fl_today:'Today'},
+fr:{nav_about:'À propos',nav_creators:'Créateurs',nav_blog:'Blog',nav_faq:'FAQ',nav_contact:'Contact',nav_cta:'Commencer →',hero_badge:'PREMIÈRE PLATEFORME EN ALGÉRIE',hero_title:'CONNECTEZ VOTRE <span class="hl">MARQUE</span> AUX <span class="hl">MICRO-INFLUENCEURS</span> ALGÉRIENS.',hero_sub:'La première plateforme self-service pour trouver, contacter et lancer des campagnes avec des créateurs algériens vérifiés.',hero_cta1:'Lancer une campagne →',hero_cta2:'Je suis créateur',stat_creators:'Créateurs actifs',stat_wilayas:'Wilayas couvertes',stat_satis:'Satisfaction',mq_label:'Ils nous font confiance',cr_tag:'Nouveaux talents',cr_title:'Créateurs récemment inscrits',cr_desc:'Découvrez nos derniers créateurs vérifiés.',cr_view:'Voir le profil',pr_tag:'Tarifs',pr_title:'Tarifs simples et transparents',pr_desc:'Pour les entreprises. Gratuit pour les créateurs.',how_tag:'Fonctionnement',how_title:'Simple & Efficace',how_tab1:'Créateurs',how_tab2:'Entreprises',ft_tag:'Découvrir',ft_title:'Pourquoi Influzy',f1_t:'Recherche intelligente',f1_d:'Trouvez les bons influenceurs avec des filtres avancés.',f2_t:'Qualité vérifiée',f2_d:'Chaque créateur est vérifié manuellement.',f3_t:'Analytics en temps réel',f3_d:'Suivez la performance avec des rapports détaillés.',f4_t:'Paiements sécurisés',f4_d:'CCP, BaridiMob, virement bancaire.',f5_t:'Support 24/7',f5_d:'Équipe dédiée pour vos campagnes.',f6_t:'Expertise locale',f6_d:'Connaissance approfondie du marché algérien.',cta_title:'Prêt à amplifier votre <span class="hl">marque</span> ?',cta_desc:'Rejoignez la plateforme d\'influence #1 en Algérie.',cta_btn1:'Lancer une campagne →',cta_btn2:'En savoir plus',fl_campaign:'Campagne validée',fl_2min:'Il y a 2 min',fl_paid:'Paiement envoyé',fl_match:'Nouveau match créateur',fl_score:'Score : 94%',fl_engage:'+2 847 interactions',fl_today:'Aujourd\'hui'},
+ar:{nav_about:'من نحن',nav_creators:'صناع المحتوى',nav_blog:'المدونة',nav_faq:'أسئلة',nav_contact:'اتصل بنا',nav_cta:'ابدأ الآن ←',hero_badge:'أول منصة في الجزائر',hero_title:'نربط <span class="hl">العلامات التجارية</span> بـ<span class="hl">المؤثرين الصغار</span> في الجزائر.',hero_sub:'أول منصة خدمة ذاتية للعثور على صناع محتوى جزائريين موثقين والتعاون معهم.',hero_cta1:'← أطلق حملة',hero_cta2:'أنا صانع محتوى',stat_creators:'صانع محتوى',stat_wilayas:'ولاية مغطاة',stat_satis:'نسبة الرضا',mq_label:'يثقون بنا',cr_tag:'مواهب جديدة',cr_title:'صناع محتوى انضموا مؤخراً',cr_desc:'اكتشف أحدث المبدعين الموثقين.',cr_view:'عرض الملف',pr_tag:'الأسعار',pr_title:'أسعار بسيطة وشفافة',pr_desc:'للشركات. مجاني لصناع المحتوى.',how_tag:'كيف يعمل',how_title:'بسيط وفعال',how_tab1:'صناع المحتوى',how_tab2:'الشركات',ft_tag:'اكتشف',ft_title:'لماذا Influzy',f1_t:'اكتشاف ذكي',f1_d:'ابحث عن المؤثرين بفلاتر متقدمة.',f2_t:'جودة موثقة',f2_d:'كل مبدع تم التحقق منه يدوياً.',f3_t:'تحليلات فورية',f3_d:'تابع الأداء بتقارير مفصلة.',f4_t:'دفع آمن',f4_d:'CCP، BaridiMob، تحويل بنكي.',f5_t:'دعم 24/7',f5_d:'فريق متخصص لحملاتك.',f6_t:'خبرة محلية',f6_d:'فهم عميق للسوق الجزائري.',cta_title:'مستعد لتعزيز <span class="hl">علامتك</span>؟',cta_desc:'انضم لمنصة التأثير الأولى في الجزائر.',cta_btn1:'← أطلق حملة',cta_btn2:'اعرف أكثر',fl_campaign:'تمت الموافقة',fl_2min:'منذ دقيقتين',fl_paid:'تم الدفع',fl_match:'تطابق جديد',fl_score:'النتيجة: 94%',fl_engage:'+2,847 تفاعل',fl_today:'اليوم'}
+};
+let curL='en';
+function setL(l,btn){curL=l;document.querySelectorAll('.lsw button').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');document.documentElement.dir=l==='ar'?'rtl':'ltr';const d=L[l];if(!d)return;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k])el.innerHTML=d[k]})}
+</script>
 </body>
 </html>

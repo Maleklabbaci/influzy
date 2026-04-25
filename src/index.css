@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* CSS Variables */
+:root {
+  --red: #D42B2B;
+  --red2: #FF3D3D;
+  --violet: #6B21A8;
+  --violet2: #9333EA;
+  --white: #FAFAFA;
+  --black: #0A0A0A;
+  --gray: #1A1A1A;
+  --gray2: #2A2A2A;
+  --muted: #888;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Ticker animation */
+@keyframes tick {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: tick 25s linear infinite;
+}
+
+/* Fade animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.fade-left {
+  opacity: 0;
+  animation: fadeInLeft 0.7s ease forwards;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }

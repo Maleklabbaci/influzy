@@ -36,7 +36,7 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center mt-16">
           <div className="hidden md:block relative fade-left">
             <img
-              src="https://images.pexels.com/photos/6003069/pexels-photo-6003069.jpeg?_gl=1*klgwjx*_ga*NjA0NjgzODgzLjE3NzUzODUyNzc.*_ga_8JE65Q40S6*czE3NzcxNjQ4MjQkbzYkZzEkdDE3NzcxNjUyNDckajU0JGwwJGgw"
+              src="https://images.pexels.com/photos/8154664/pexels-photo-8154664.jpeg?_gl=1*1l68xeb*_ga*NjA0NjgzODgzLjE3NzUzODUyNzc.*_ga_8JE65Q40S6*czE3NzcxNjQ4MjQkbzYkZzEkdDE3NzcxNjU0NTckajU5JGwwJGgw"
               alt="Équipe"
               className="rounded-lg w-full aspect-[3/4] object-cover saturate-120 brightness-85"
             />

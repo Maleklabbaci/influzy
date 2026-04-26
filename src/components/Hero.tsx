@@ -60,7 +60,7 @@ export default function Hero() {
         <div
           className="w-full h-full bg-cover bg-center saturate-110 brightness-75"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/5177792/pexels-photo-5177792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)'
+            backgroundImage: 'url(https://images.pexels.com/photos/33827652/pexels-photo-33827652.jpeg?_gl=1*dbf8wd*_ga*NjA0NjgzODgzLjE3NzUzODUyNzc.*_ga_8JE65Q40S6*czE3NzcxNjQ4MjQkbzYkZzEkdDE3NzcxNjQ5OTIkajU5JGwwJGgw)'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-transparent to-transparent"></div>
